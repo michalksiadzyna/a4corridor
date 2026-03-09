@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — A4 Corridor</title>
+<meta name="description" content="Thank you for your interest in the A4 Corridor investment opportunity. Your exposé request has been received.">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- GA4: G-XXXXXXXXXX -->
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">A4 Corridor</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="corridor.html">Corridor</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="defense.html">Defense</a></li>
+        <li><a href="plots.html">Plots</a></li>
+        <li><a href="expose.html">Exposé</a></li>
+    </ul>
+</nav>
+
+<section class="page-hero" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
+    <div class="thankyou-icon">&#10003;</div>
+    <h1>Thank You</h1>
+    <p class="lead" style="margin-bottom: 40px;">Your request has been received. We will be in touch within 24 hours with the full investment exposé.</p>
+
+    <div style="margin-bottom: 40px;">
+        <a href="#" class="cta-button" id="download-expose" onclick="trackDownload()">Download Exposé PDF</a>
+    </div>
+
+    <p class="lead" style="font-size: 0.9rem; color: #6b7f95;">If you have immediate questions, contact us directly at<br><a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></p>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section" style="text-align: center;">
+    <div class="section-label">Continue Exploring</div>
+    <h2>While You Wait</h2>
+    <div class="info-grid" style="max-width: 800px; margin: 40px auto;">
+        <div class="info-card">
+            <h4><a href="corridor.html">The Corridor</a></h4>
+            <p>€3.8B in confirmed investment, 15+ documented projects, and the companies already operating here.</p>
+        </div>
+        <div class="info-card">
+            <h4><a href="infrastructure.html">12 Infrastructure Projects</a></h4>
+            <p>€355M+ in roads, rail, energy, and flood protection — all underway, all publicly funded.</p>
+        </div>
+        <div class="info-card">
+            <h4><a href="plots.html">Available Plots</a></h4>
+            <p>Three production-zoned plots from 4,143 m² to 27,384 m². Permanent MPZP zoning.</p>
+        </div>
+        <div class="info-card">
+            <h4><a href="global-comparison.html">Global Price Comparison</a></h4>
+            <p>Industrial land prices across the US, Sweden, Czech Republic, and Poland.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="contact"><a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></div>
+    <div class="legal">© 2026 A4 Corridor. All information presented is factual and sourced.</div>
+</footer>
+
+<!-- GA4 Event Tracking -->
+<script>
+function trackDownload() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'expose_download', {
+            'event_category': 'conversion',
+            'event_label': 'expose_pdf_download'
+        });
+    }
+}
+
+// Track thank you page view as conversion
+if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+        'event_category': 'expose_request',
+        'event_label': 'thankyou_page_view'
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Investment Exposé — A4 Corridor</title>
+<meta name="description" content="Request the full A4 Corridor investment exposé: corridor analysis, infrastructure timeline, land value data, plot specifications, and financial projections.">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- GA4: G-XXXXXXXXXX -->
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">A4 Corridor</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="corridor.html">Corridor</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="defense.html">Defense</a></li>
+        <li><a href="plots.html">Plots</a></li>
+        <li><a href="expose.html" class="active">Exposé</a></li>
+    </ul>
+</nav>
+
+<section class="page-hero">
+    <div class="section-label">Investment Exposé</div>
+    <h1>Request the Full Exposé</h1>
+    <p class="lead">The investment exposé is a comprehensive document covering corridor analysis, infrastructure timeline, global land price comparisons, plot specifications, zoning details, and transaction process. Provided as a professional PDF.</p>
+</section>
+
+<section class="section">
+    <div class="section-label">What's Included</div>
+    <h2>Exposé Contents</h2>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h4>Corridor Analysis</h4>
+            <p>€3.8B investment breakdown, company presence mapping, Swedish cluster analysis, defense sector overview, and supply contraction data.</p>
+        </div>
+        <div class="info-card">
+            <h4>Infrastructure Timeline</h4>
+            <p>All 12 infrastructure projects with investment amounts, current status, expected completion dates, and impact assessment for each.</p>
+        </div>
+        <div class="info-card">
+            <h4>Land Value Data</h4>
+            <p>Global price comparisons (US, Sweden, CEE), historical appreciation trends, supply-demand analysis, and land cost as percentage of facility investment.</p>
+        </div>
+        <div class="info-card">
+            <h4>Plot Specifications</h4>
+            <p>Full specifications for all three plots: area, zoning, MPZP extracts, road access, utility connectivity, land registry details, and pricing.</p>
+        </div>
+        <div class="info-card">
+            <h4>Legal & Regulatory</h4>
+            <p>Transaction process, legal framework, UKUR exemption confirmation, foreign buyer requirements, and notarial system overview.</p>
+        </div>
+        <div class="info-card">
+            <h4>Tax Incentives</h4>
+            <p>SEZ Invest-Park CIT relief analysis, EU structural fund availability, R&D credits, and effective tax rate modeling for qualifying investments.</p>
+        </div>
+    </div>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section">
+    <div class="section-label">Request Form</div>
+    <h2>Get the Exposé</h2>
+    <p>Complete the form below to receive the full investment exposé. We respond within 24 hours.</p>
+
+    <div class="form-container">
+        <form action="https://formspree.io/f/PLACEHOLDER" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company name (optional)">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Any specific questions or areas of interest (optional)"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="A4 Corridor — Exposé Request">
+            <input type="hidden" name="_next" value="thankyou.html">
+            <button type="submit" class="cta-button" style="width: 100%; text-align: center;">Send Request</button>
+        </form>
+    </div>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section" style="text-align: center;">
+    <div class="section-label">Alternative</div>
+    <h2>Prefer Direct Contact?</h2>
+    <p style="max-width: none; text-align: center;">Reach us directly at <a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></p>
+</section>
+
+<footer>
+    <div class="contact"><a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></div>
+    <div class="legal">© 2026 A4 Corridor. All information presented is factual and sourced.</div>
+</footer>
+
+<!-- GA4 Event Tracking Placeholder -->
+<script>
+// GA4 form submission tracking
+document.querySelector('form').addEventListener('submit', function() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'expose_request', {
+            'event_category': 'conversion',
+            'event_label': 'expose_form_submit'
+        });
+    }
+});
+</script>
+
+</body>
+</html>

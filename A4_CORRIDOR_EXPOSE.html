@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A4 Corridor — Investment Exposé</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1a2332;
+  --bg2: #1f2940;
+  --bg3: #243050;
+  --gold: #b8a472;
+  --gold-l: #d4c08a;
+  --gold-d: #8a7a56;
+  --white: #f0ede6;
+  --muted: #9a9890;
+  --dim: #6a6860;
+  --border: rgba(184, 164, 114, 0.15);
+  --green: #5cb87a;
+  --red: #d45050;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== COVER ===== */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 60px;
+  position: relative;
+  background: radial-gradient(ellipse at 30% 40%, rgba(184,164,114,.04) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 70%, rgba(184,164,114,.03) 0%, transparent 50%),
+              var(--bg);
+}
+.cover::before, .cover::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-d), transparent);
+}
+.cover::before { top: 0; }
+.cover::after { bottom: 0; }
+
+.cover .badge {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-d);
+  padding: 6px 20px;
+  border-radius: 3px;
+  margin-bottom: 50px;
+}
+.cover h1 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+.cover h1 em { color: var(--gold); font-style: normal; }
+.cover .subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 600px;
+  margin-bottom: 50px;
+  line-height: 1.7;
+}
+.cover .meta-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cover .meta-item { text-align: center; }
+.cover .mv {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.cover .ml {
+  font-size: .72rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-top: 2px;
+}
+.cover .contact-line {
+  margin-top: 60px;
+  font-size: .82rem;
+  color: var(--dim);
+  letter-spacing: .05em;
+}
+.cover .contact-line a { color: var(--gold); text-decoration: none; }
+
+/* ===== NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(26,35,50,.96);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+nav .ni {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+nav .ni::-webkit-scrollbar { display: none; }
+nav a {
+  color: var(--dim);
+  text-decoration: none;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 14px 14px;
+  white-space: nowrap;
+  transition: color .3s;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ===== CONTENT ===== */
+.content { max-width: 1100px; margin: 0 auto; padding: 0 50px 100px; }
+section { margin-top: 70px; }
+.section-label {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 8px;
+}
+h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+h2 em { color: var(--gold); font-style: normal; }
+h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  margin: 32px 0 12px;
+}
+.section-intro {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+p { color: var(--muted); font-size: .9rem; margin-bottom: 14px; line-height: 1.8; }
+strong { color: var(--white); font-weight: 500; }
+
+/* ===== STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 20px 0 28px;
+}
+.stat {
+  background: var(--bg2);
+  padding: 22px 18px;
+  text-align: center;
+}
+.sv {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.sl {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.sd {
+  font-size: .72rem;
+  color: var(--dim);
+  margin-top: 2px;
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 24px;
+}
+thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--gold-d);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  font-weight: 600;
+}
+td {
+  padding: 12px 14px;
+  font-size: .85rem;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(255,255,255,.03);
+  vertical-align: top;
+}
+tr:hover td { background: rgba(184,164,114,.02); }
+.gn { color: var(--green); }
+.rd { color: var(--red); }
+.g { color: var(--gold); }
+.n { text-align: right; }
+
+/* ===== HIGHLIGHT BOX ===== */
+.hbox {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+.hbox.green { border-left-color: var(--green); }
+.hbox p { margin: 0; }
+
+/* ===== INVESTMENT GRID ===== */
+.inv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.inv-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+}
+.ic-name {
+  font-weight: 500;
+  color: var(--white);
+  font-size: .9rem;
+  margin-bottom: 4px;
+}
+.ic-val {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.ic-dist {
+  font-size: .72rem;
+  color: var(--dim);
+  margin-bottom: 8px;
+}
+.ic-desc {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== PLOT CARDS ===== */
+.plot-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.pc-tier {
+  display: inline-block;
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background: rgba(184,164,114,.12);
+  color: var(--gold);
+  border: 1px solid rgba(184,164,114,.25);
+  margin-bottom: 12px;
+}
+.pc-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.pc-price {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 12px 0 4px;
+}
+.pc-price-sub {
+  font-size: .82rem;
+  color: var(--dim);
+  margin-bottom: 16px;
+}
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.pc-item {
+  background: var(--bg);
+  border: 1px solid rgba(255,255,255,.04);
+  border-radius: 4px;
+  padding: 14px;
+}
+.pc-label {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--dim);
+  margin-bottom: 3px;
+}
+.pc-value {
+  font-weight: 500;
+  color: var(--white);
+  font-size: .9rem;
+}
+
+/* ===== SUPPLY BAR ===== */
+.squeeze-bar {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0;
+}
+.sb-name { font-size: .82rem; font-weight: 500; color: var(--white); text-align: right; }
+.sb-bar { height: 14px; background: var(--bg3); border-radius: 7px; overflow: hidden; }
+.sb-fill { height: 100%; border-radius: 7px; }
+.sb-label { font-size: .72rem; color: var(--muted); }
+
+/* ===== LIST ===== */
+ul { list-style: none; padding: 0; margin: 10px 0; }
+ul li { padding: 6px 0 6px 20px; position: relative; color: var(--muted); font-size: .9rem; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 8px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-d), transparent);
+  margin: 50px 0;
+}
+
+/* ===== FOOTER ===== */
+.foot {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 50px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.foot p { font-size: .76rem; color: var(--dim); }
+.foot a { color: var(--gold); text-decoration: none; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cover h1 { font-size: 2.2rem; }
+  .content { padding: 0 20px 60px; }
+  .inv-grid { grid-template-columns: 1fr; }
+  .cover .meta-row { flex-direction: column; gap: 20px; }
+  h2 { font-size: 1.6rem; }
+  .squeeze-bar { grid-template-columns: 1fr; gap: 4px; }
+  .sb-name { text-align: left; }
+}
+
+@media print {
+  body { background: #fff; color: #111; }
+  .cover { background: #fff; min-height: auto; padding: 40px; }
+  .cover h1 { color: #111; }
+  .cover h1 em, .sv, .ic-val, .pc-price, .mv, .g { color: #8B7A4C; }
+  nav { display: none; }
+  .stat, .inv-card, .plot-card, .hbox, .squeeze-bar, .pc-item { background: #f8f7f4; border-color: #ddd; }
+  p, td, li, .section-intro { color: #444; }
+  strong, .pc-value { color: #111; }
+  thead th { background: #eee; color: #8B7A4C; }
+  .cover::before, .cover::after { background: #8B7A4C; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ COVER ═══════════════════════════════════════ -->
+<div class="cover">
+<div class="badge">Investment Expos&eacute;</div>
+<h1>Industrial Land on the <em>A4 Corridor</em></h1>
+<p class="subtitle">40,849 m&sup2; of production-zoned land on the A4 motorway corridor in western Poland, 25 km from Wroc&lstrok;aw. Permanent zoning. Three utilities confirmed. &euro;3.8 billion in converging investment.</p>
+
+<div class="meta-row">
+<div class="meta-item"><div class="mv">40,849 m&sup2;</div><div class="ml">Available Area</div></div>
+<div class="meta-item"><div class="mv">P/UO.4</div><div class="ml">MPZP Zoning</div></div>
+<div class="meta-item"><div class="mv">&euro;3.8B</div><div class="ml">Corridor Investment</div></div>
+<div class="meta-item"><div class="mv">25 km</div><div class="ml">From Wroc&lstrok;aw</div></div>
+</div>
+
+<p class="contact-line">Direct from owner &mdash; zero commission &bull; <a href="https://a4corridor.com">a4corridor.com</a> &bull; michal.ksiadzyna@a4corridor.com</p>
+</div>
+
+<!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+<nav><div class="ni">
+<a href="#poland">Poland</a>
+<a href="#silesia">Lower Silesia</a>
+<a href="#corridor">Corridor</a>
+<a href="#infra">Infrastructure</a>
+<a href="#supply">Supply</a>
+<a href="#defense">Defense</a>
+<a href="#plots">Plots</a>
+<a href="#zoning">Zoning</a>
+<a href="#transaction">Transaction</a>
+</div></nav>
+
+<!-- ═══════════════════════════════════════ CONTENT ═══════════════════════════════════════ -->
+<div class="content">
+
+<!-- ===== A. POLAND ===== -->
+<section id="poland">
+<div class="section-label">Section A</div>
+<h2>Poland &mdash; The <em>Growth Engine</em></h2>
+<p class="section-intro">The sixth-largest economy in the European Union, NATO's most committed defense spender, and the only EU member state to sustain 33 consecutive years of economic growth. Poland is the manufacturing floor that Western Europe is building on.</p>
+
+<div class="stats">
+<div class="stat"><div class="sv">&euro;750B+</div><div class="sl">GDP (2025)</div><div class="sd">6th largest in the EU</div></div>
+<div class="stat"><div class="sv">33 yrs</div><div class="sl">Consecutive Growth</div><div class="sd">1992&ndash;2025 &mdash; only EU country</div></div>
+<div class="stat"><div class="sv">4.7%</div><div class="sl">Defense / GDP</div><div class="sd">Highest in NATO Europe</div></div>
+<div class="stat"><div class="sv">A&minus;/A2</div><div class="sl">Credit Rating</div><div class="sd">Fitch / Moody&rsquo;s</div></div>
+<div class="stat"><div class="sv">38M</div><div class="sl">Population</div><div class="sd">EU single market: 450M</div></div>
+</div>
+
+<table>
+<thead><tr><th>Factor</th><th>Data</th></tr></thead>
+<tbody>
+<tr><td><strong>EU &amp; NATO</strong></td><td>EU member since 2004, NATO since 1999. Full single market access, Schengen area. 450 million consumers reachable with zero tariffs.</td></tr>
+<tr><td><strong>Economic resilience</strong></td><td>33 consecutive years of GDP growth &mdash; the only EU country with this record. Grew through the 2008 crisis, eurozone debt crisis, COVID-19, and 2022 energy shock.</td></tr>
+<tr><td><strong>Defense investment</strong></td><td>4.7% of GDP allocated to defense &mdash; &euro;47 billion ($54B) annually. &euro;442 billion ($508B) budgeted through 2035 (Deloitte). The largest conventional army build-up in Europe since the Cold War.</td></tr>
+<tr><td><strong>Manufacturing hub</strong></td><td>300+ foreign industrial investors. 3rd largest automotive producer in Central Europe. Established clusters: automotive, defense, electronics, food processing, logistics.</td></tr>
+<tr><td><strong>Labor advantage</strong></td><td>Educated workforce at approximately one-third of German labor costs. 45%+ tertiary education rate.</td></tr>
+<tr><td><strong>Tax incentives</strong></td><td>Polish Investment Zone (PSI): CIT exemption for qualifying investments &mdash; available nationwide, including these plots. Tax savings over 10 years routinely exceed total land acquisition cost.</td></tr>
+<tr><td><strong>Credit ratings</strong></td><td>Investment grade: Fitch A&minus;, Moody&rsquo;s A2, S&amp;P A&minus;. Stable outlook. Sovereign risk on par with South Korea and Israel.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== B. LOWER SILESIA ===== -->
+<section id="silesia">
+<div class="section-label">Section B</div>
+<h2>Lower Silesia &amp; <em>Wroc&lstrok;aw</em></h2>
+<p class="section-intro">Lower Silesia is Poland&rsquo;s industrial powerhouse &mdash; the voivodeship with the highest new warehouse delivery in the country and the densest concentration of foreign manufacturers. The plots sit 25 km southeast of Wroc&lstrok;aw, a metro area of 1.1 million people.</p>
+
+<div class="stats">
+<div class="stat"><div class="sv">2.9M</div><div class="sl">Voivodeship Pop.</div><div class="sd">Lower Silesia total</div></div>
+<div class="stat"><div class="sv">1.1M</div><div class="sl">Wroc&lstrok;aw Metro</div><div class="sd">4th largest city in Poland</div></div>
+<div class="stat"><div class="sv">675K m&sup2;</div><div class="sl">Warehouse 2024</div><div class="sd">Highest delivery in Poland</div></div>
+<div class="stat"><div class="sv">28+</div><div class="sl">Universities</div><div class="sd">120,000+ students</div></div>
+</div>
+
+<table>
+<thead><tr><th>Factor</th><th>Data</th></tr></thead>
+<tbody>
+<tr><td><strong>Foreign investment</strong></td><td>Major employers: Toyota, Volvo, Electrolux, 3M, Amazon, Google, Nokia, LG, Whirlpool, Bosch. 450+ companies in the region&rsquo;s economic zones.</td></tr>
+<tr><td><strong>Talent pipeline</strong></td><td>28+ universities. 120,000+ students. Wroc&lstrok;aw University of Science and Technology: top engineering school in Poland.</td></tr>
+<tr><td><strong>Logistics</strong></td><td>A4 motorway (European E40 corridor), A8 ring road, DK94 national road. 675,000 m&sup2; of new warehouse space delivered in 2024.</td></tr>
+<tr><td><strong>Air connectivity</strong></td><td>Wroc&lstrok;aw-Copernicus Airport: 3.8M+ passengers, direct flights to London, Frankfurt, Munich, Amsterdam, Paris, Stockholm.</td></tr>
+<tr><td><strong>Rail</strong></td><td>50+ regional trains daily on the O&lstrok;awa&ndash;Wroc&lstrok;aw axis (15-minute journey). New O&lstrok;awa Zachodnia station opened June 2025.</td></tr>
+<tr><td><strong>Quality of life</strong></td><td>European Best Destination 2018. Host of 2024 European Games. Vibrant culture at a fraction of Western European living costs.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== C. THE CORRIDOR ===== -->
+<section id="corridor">
+<div class="section-label">Section C</div>
+<h2><em>&euro;3.8 Billion</em> of Converging Investment</h2>
+<p class="section-intro">&Sacute;cinawa Polska sits at the intersection of Wroc&lstrok;aw&rsquo;s metropolitan expansion, the DK94 industrial corridor, and Poland&rsquo;s largest defense manufacturing cluster. Over &euro;3.8 billion ($4.4B) in documented investment is concentrated within 30 km.</p>
+
+<div class="stats">
+<div class="stat"><div class="sv">25 km</div><div class="sl">From Wroc&lstrok;aw</div><div class="sd">40 min by car, 15 min by train</div></div>
+<div class="stat"><div class="sv">3 km</div><div class="sl">Electrolux / Essity</div><div class="sd">Swedish manufacturing cluster</div></div>
+<div class="stat"><div class="sv">10 km</div><div class="sl">Jelcz Factory</div><div class="sd">&euro;179M ($206M) military expansion</div></div>
+<div class="stat"><div class="sv">12 km</div><div class="sl">Toyota TMMP</div><div class="sd">&euro;1.6B ($1.84B) cumulative</div></div>
+</div>
+
+<h3>Major Investments Within 30 km</h3>
+<div class="inv-grid">
+<div class="inv-card">
+<div class="ic-name">Toyota Motor Manufacturing Poland</div>
+<div class="ic-val">&euro;1.6B ($1.84B)</div>
+<div class="ic-dist">12 km &bull; Jelcz-Laskowice / Wa&lstrok;brzych</div>
+<div class="ic-desc">Cumulative investment. Engines and transmissions, ~3,000 employees. 312,000 hybrid engine units/year.</div>
+</div>
+<div class="inv-card">
+<div class="ic-name">Kumho Tire</div>
+<div class="ic-val">&euro;512M ($589M)</div>
+<div class="ic-dist">55 km &bull; Opole &bull; Operations Aug 2028</div>
+<div class="ic-desc">Tire production for the automotive cluster. 400+ jobs.</div>
+</div>
+<div class="inv-card">
+<div class="ic-name">IONWAY / Umicore+VW</div>
+<div class="ic-val">&euro;395M ($454M)</div>
+<div class="ic-dist">60 km &bull; Nysa &bull; Production 2026</div>
+<div class="ic-desc">Cathode active materials for EV batteries. 900 jobs.</div>
+</div>
+<div class="inv-card">
+<div class="ic-name">Jelcz Military Factory Expansion</div>
+<div class="ic-val">&euro;179M ($206M)</div>
+<div class="ic-dist">10 km &bull; Signed March 2026</div>
+<div class="ic-desc">New factory at Mi&lstrok;oszyce (24.6 ha). 1,800 military vehicles/year by 2030. 1,350+ employees. Poland&rsquo;s sole medium/heavy military truck manufacturer.</div>
+</div>
+<div class="inv-card">
+<div class="ic-name">SHEIN Distribution Hub</div>
+<div class="ic-val">391,000 m&sup2;</div>
+<div class="ic-dist">30 km &bull; Wroc&lstrok;aw South</div>
+<div class="ic-desc">5,000 jobs. Logistics demand pushing south from Wroc&lstrok;aw metro area.</div>
+</div>
+<div class="inv-card">
+<div class="ic-name">Electrolux / Essity / Autoliv / MCC</div>
+<div class="ic-val">Swedish Cluster</div>
+<div class="ic-dist">3 km from plots</div>
+<div class="ic-desc">Four Swedish manufacturers within 3 km. Electrolux: 1,250 employees, 2M washing machines/year. The densest Swedish manufacturing cluster in Central Europe.</div>
+</div>
+</div>
+
+<div class="hbox">
+<p><strong>Total documented investment within 30 km: over &euro;3.8 billion ($4.4B).</strong> These are committed projects &mdash; signed agreements, obtained permits, or active construction. The corridor is consuming investment at a pace that structurally elevates the value of every hectare within it.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== D. INFRASTRUCTURE (12 PROJECTS) ===== -->
+<section id="infra">
+<div class="section-label">Section D</div>
+<h2>12 Infrastructure Projects &mdash; <em>&euro;355M+</em></h2>
+<p class="section-intro">The Polish government and European Union are investing &euro;355M+ ($408M+) in infrastructure projects converging on this corridor. Roads, rail, energy grid, and flood protection &mdash; all currently in progress. Infrastructure the buyer receives without funding.</p>
+
+<table>
+<thead><tr><th>#</th><th>Project</th><th class="n">Investment</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Trasa Mostowa</strong> &mdash; New river crossing (330m Odra bridge + 4.3 km bypass)</td><td class="n g">&euro;62M ($71M)</td><td><span class="gn">ZRID decision Dec 2025</span></td></tr>
+<tr><td>2</td><td><strong>DK94 Reconstruction</strong> &mdash; Marcinkowice-Stanowice-O&lstrok;awa (complete rebuild)</td><td class="n g">Major</td><td><span class="gn">ZRID obtained</span></td></tr>
+<tr><td>3</td><td><strong>DK94 O&lstrok;awa Bypass</strong> &mdash; 11 km new road</td><td class="n g">Major</td><td>Env. decision Q3 2026</td></tr>
+<tr><td>4</td><td><strong>DK94/DK36 2x2 Expansion</strong> &mdash; Wroc&lstrok;aw-Lubin (~60 km)</td><td class="n g">Major</td><td>Variant selection H2 2026</td></tr>
+<tr><td>5</td><td><strong>A4 Motorway Rerouting</strong> &mdash; New 3-lane route south of Wroc&lstrok;aw</td><td class="n g">Major</td><td>Variant 2.1 approved Nov 2025</td></tr>
+<tr><td>6</td><td><strong>Jelcz Military Factory</strong> &mdash; New production facility at Mi&lstrok;oszyce</td><td class="n g">&euro;179M ($206M)</td><td><span class="gn">Signed March 2026</span></td></tr>
+<tr><td>7</td><td><strong>TAURON GPZ R-186 Substation</strong> &mdash; +30 MW capacity</td><td class="n g">&euro;7.4M ($8.5M)</td><td>Under construction</td></tr>
+<tr><td>8</td><td><strong>Polder Lipki-O&lstrok;awa</strong> &mdash; Flood protection modernization (EU funded)</td><td class="n g">&euro;232M ($267M)</td><td>Under construction</td></tr>
+<tr><td>9</td><td><strong>DW396 + DW455 Repairs</strong> &mdash; Regional road upgrades</td><td class="n g">&euro;8.9M ($10.2M)</td><td>Under construction</td></tr>
+<tr><td>10</td><td><strong>Wiejska Viaduct</strong> &mdash; Road infrastructure upgrade</td><td class="n g">&euro;12&ndash;14M ($14&ndash;16M)</td><td>In planning</td></tr>
+<tr><td>11</td><td><strong>O&lstrok;awa G&lstrok;&oacute;wna Station Renovation</strong> &mdash; Main rail station upgrade</td><td class="n g">&euro;4M ($4.6M)</td><td>Under construction</td></tr>
+<tr><td>12</td><td><strong>O&lstrok;awa Zachodnia Station</strong> &mdash; New rail station</td><td class="n g">&euro;3.8M ($4.4M)</td><td><span class="gn">Opened June 2025</span></td></tr>
+</tbody>
+</table>
+
+<div class="hbox green">
+<p><strong>Rail connectivity:</strong> O&lstrok;awa G&lstrok;&oacute;wna station (15&ndash;25 min to Wroc&lstrok;aw, Intercity + POLREGIO services, 50+ daily trains). O&lstrok;awa Zachodnia station opened June 2025 &mdash; proof the city is actively expanding infrastructure.</p>
+</div>
+
+<h3>Utilities</h3>
+<table>
+<thead><tr><th>Utility</th><th>Status</th><th>Provider</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td><strong>Electricity</strong></td><td><span class="gn">Confirmed</span></td><td>TAURON</td><td>GPZ R-186 substation (110/20 kV), +30 MW expansion underway. Connection fee: ~&euro;17/kW.</td></tr>
+<tr><td><strong>Water</strong></td><td><span class="gn">Confirmed</span></td><td>ZWiK O&lstrok;awa</td><td>Water main in municipal road. 98% of village households connected.</td></tr>
+<tr><td><strong>Sewage</strong></td><td><span class="gn">Confirmed</span></td><td>Aglomeracja O&lstrok;awa</td><td>97.4% sewered. Dedicated &euro;1.7M sewage project completed for &Sacute;cinawa Polska.</td></tr>
+<tr><td><strong>Gas</strong></td><td><span class="rd">Absent</span></td><td>&mdash;</td><td>No local distribution network. Transit pipeline passes through gmina.</td></tr>
+<tr><td><strong>Internet</strong></td><td><span class="gn">Available</span></td><td>Orange</td><td>FTTH fiber build-out. 4G/5G mobile coverage.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== E. SUPPLY ===== -->
+<section id="supply">
+<div class="section-label">Section E</div>
+<h2>Available Land Is <em>Disappearing</em></h2>
+<p class="section-intro">The supply of zoned production land on the Wroc&lstrok;aw-O&lstrok;awa corridor has been systematically consumed over the past decade. The construction pipeline for new industrial supply has declined 94%.</p>
+
+<div class="squeeze-bar">
+<div class="sb-name">Wroc&lstrok;aw City</div>
+<div class="sb-bar"><div class="sb-fill" style="width:100%;background:var(--red)"></div></div>
+<div class="sb-label rd">Unavailable</div>
+</div>
+<div class="squeeze-bar">
+<div class="sb-name">Siechnice EAZ</div>
+<div class="sb-bar"><div class="sb-fill" style="width:100%;background:var(--red)"></div></div>
+<div class="sb-label rd">Sold out</div>
+</div>
+<div class="squeeze-bar">
+<div class="sb-name">Stanowice SEZ</div>
+<div class="sb-bar"><div class="sb-fill" style="width:93%;background:linear-gradient(90deg,var(--gold),var(--red))"></div></div>
+<div class="sb-label">93% occupied</div>
+</div>
+<div class="squeeze-bar">
+<div class="sb-name">Godzikowice SEZ</div>
+<div class="sb-bar"><div class="sb-fill" style="width:70%;background:var(--gold)"></div></div>
+<div class="sb-label">~39 ha remaining</div>
+</div>
+<div class="squeeze-bar">
+<div class="sb-name" style="color:var(--gold)">&Sacute;cinawa Polska</div>
+<div class="sb-bar"><div class="sb-fill" style="width:40%;background:var(--green)"></div></div>
+<div class="sb-label gn">40,849 m&sup2; available</div>
+</div>
+
+<div class="hbox green">
+<p><strong>Polish Investment Zone (PSI)</strong> replaced the old Special Economic Zone boundary system in 2018. CIT exemption for qualifying investments is available <strong>anywhere in Poland</strong>, including these plots. The historic price premium for being "inside the SEZ" has been eliminated.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== F. DEFENSE ===== -->
+<section id="defense">
+<div class="section-label">Section F</div>
+<h2>Defense &amp; <em>Security</em></h2>
+<p class="section-intro">Poland allocates 4.7% of GDP to defense &mdash; the highest proportion in NATO Europe. The Jelcz factory, 10 km from these plots, is the sole manufacturer of medium and heavy military vehicles for the Polish Armed Forces.</p>
+
+<div class="stats">
+<div class="stat"><div class="sv">4.7%</div><div class="sl">GDP to Defense</div><div class="sd">Highest in NATO Europe</div></div>
+<div class="stat"><div class="sv">&euro;47B ($54B)</div><div class="sl">Annual Budget</div><div class="sd">2026</div></div>
+<div class="stat"><div class="sv">&euro;442B ($508B)</div><div class="sl">Through 2035</div><div class="sd">Deloitte projection</div></div>
+<div class="stat"><div class="sv">&euro;179M ($206M)</div><div class="sl">Jelcz Expansion</div><div class="sd">10 km from plots</div></div>
+</div>
+
+<p>PGZ (Polish Armaments Group) is actively pursuing <strong>"polonization"</strong> &mdash; replacing imported military components with domestic production. Companies that position near the Jelcz factory are positioning for a decade of defense-driven demand. The EU&rsquo;s SAFE program (&euro;38B / $43.7B) adds further procurement capacity.</p>
+
+<p>The defense corridor stretches from Wroc&lstrok;aw through Jelcz-Laskowice, with expanding supply chain requirements for armored vehicles, components, and support systems. The 1,800 vehicles/year production target by 2030 implies substantial demand for nearby manufacturing and logistics capacity.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== G. THE PLOTS ===== -->
+<section id="plots">
+<div class="section-label">Section G</div>
+<h2>The <em>Plots</em></h2>
+<p class="section-intro">Three investment opportunities on the A4 motorway corridor. Available individually or as a complete 40,849 m&sup2; portfolio. All plots carry permanent MPZP zoning, confirmed utility access, and direct road frontage on County Road 1572D.</p>
+
+<p><strong>GPS:</strong> 50.932071&deg;N, 17.337339&deg;E &bull; <strong>Village:</strong> &Sacute;cinawa Polska, municipality of O&lstrok;awa, O&lstrok;awa county, Lower Silesia</p>
+
+<!-- FLAGSHIP -->
+<div class="plot-card">
+<div class="pc-tier">Flagship</div>
+<div class="pc-name">Plots 133 + 135/1</div>
+<div class="pc-price">&euro;113 /m&sup2; ($130 USD)</div>
+<div class="pc-price-sub">Total: &euro;3,094,000 ($3,558,000 USD)</div>
+<div class="pc-grid">
+<div class="pc-item"><div class="pc-label">Total Area</div><div class="pc-value">27,384 m&sup2; (2.74 ha)</div></div>
+<div class="pc-item"><div class="pc-label">Plot 133</div><div class="pc-value">18,369 m&sup2;</div></div>
+<div class="pc-item"><div class="pc-label">Plot 135/1</div><div class="pc-value">9,015 m&sup2;</div></div>
+<div class="pc-item"><div class="pc-label">MPZP Zoning</div><div class="pc-value">P/UO.4 + U1 (dual zone)</div></div>
+<div class="pc-item"><div class="pc-label">Road Access</div><div class="pc-value">County Road 1572D</div></div>
+<div class="pc-item"><div class="pc-label">Land Registry</div><div class="pc-value">WR1O/00001824/3</div></div>
+<div class="pc-item"><div class="pc-label">Tax Status</div><div class="pc-value">PIT-free (acquired 2018)</div></div>
+<div class="pc-item"><div class="pc-label">Encumbrances</div><div class="pc-value">None</div></div>
+</div>
+<div class="hbox green">
+<p><strong>Dual zoning advantage:</strong> Both P/UO.4 (production + services) and U1 zoning. This broadens the permitted use to include commercial and service buildings alongside production facilities &mdash; a combination that supports mixed-use industrial campuses.</p>
+</div>
+</div>
+
+<!-- PREMIUM -->
+<div class="plot-card">
+<div class="pc-tier">Premium</div>
+<div class="pc-name">Plot 143</div>
+<div class="pc-price">&euro;127 /m&sup2; ($146 USD)</div>
+<div class="pc-price-sub">Total: &euro;1,184,000 ($1,362,000 USD)</div>
+<div class="pc-grid">
+<div class="pc-item"><div class="pc-label">Area</div><div class="pc-value">9,322 m&sup2; (0.93 ha)</div></div>
+<div class="pc-item"><div class="pc-label">MPZP Zoning</div><div class="pc-value">P/UO.4</div></div>
+<div class="pc-item"><div class="pc-label">Road Access</div><div class="pc-value">County Road 1572D</div></div>
+<div class="pc-item"><div class="pc-label">Land Registry</div><div class="pc-value">WR1O/00001824/3</div></div>
+<div class="pc-item"><div class="pc-label">Tax Status</div><div class="pc-value">PIT-free (acquired 2018)</div></div>
+<div class="pc-item"><div class="pc-label">Encumbrances</div><div class="pc-value">None</div></div>
+</div>
+<p>Closest to existing infrastructure connections. Plot 143 sits adjacent to plot 140, which has an active building with confirmed electricity, water, and sewage. Estimated connection distance: ~50m for all three utilities.</p>
+</div>
+
+<!-- ENTRY -->
+<div class="plot-card">
+<div class="pc-tier">Entry</div>
+<div class="pc-name">Plot 159</div>
+<div class="pc-price">&euro;94 /m&sup2; ($108 USD)</div>
+<div class="pc-price-sub">Total: &euro;389,000 ($447,000 USD)</div>
+<div class="pc-grid">
+<div class="pc-item"><div class="pc-label">Area</div><div class="pc-value">4,143 m&sup2; (0.41 ha)</div></div>
+<div class="pc-item"><div class="pc-label">MPZP Zoning</div><div class="pc-value">P/UO.4</div></div>
+<div class="pc-item"><div class="pc-label">Road Access</div><div class="pc-value">County Road 1572D</div></div>
+<div class="pc-item"><div class="pc-label">Land Registry</div><div class="pc-value">WR1O/00001824/3</div></div>
+<div class="pc-item"><div class="pc-label">Tax Status</div><div class="pc-value">PIT-free (acquired 2018)</div></div>
+<div class="pc-item"><div class="pc-label">Encumbrances</div><div class="pc-value">None</div></div>
+</div>
+<p>Lowest entry point for investors seeking a corridor position. Suitable for component manufacturing, warehouse, or as a strategic land bank in the path of infrastructure-driven appreciation.</p>
+</div>
+
+<div class="hbox">
+<p><strong>Full portfolio acquisition available.</strong> All three plot groups as a single transaction &mdash; 40,849 m&sup2; of contiguous production-zoned land. Combined asking: &euro;4,667,000 ($5,367,000 USD).</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== H. ZONING ===== -->
+<section id="zoning">
+<div class="section-label">Section H</div>
+<h2>Zoning &amp; <em>Legal Clarity</em></h2>
+<p class="section-intro">Every plot is covered by a Local Spatial Plan (MPZP) &mdash; the strongest form of land-use designation in Polish law. Permanent, irrevocable, and requiring no further administrative approval for development.</p>
+
+<div class="stats">
+<div class="stat"><div class="sv">P/UO.4</div><div class="sl">MPZP Zoning</div><div class="sd">Production + Services</div></div>
+<div class="stat"><div class="sv">&euro;0</div><div class="sl">Conversion Fee</div><div class="sd">RIVb mineral &mdash; statutory exemption</div></div>
+<div class="stat"><div class="sv">Exempt</div><div class="sl">UKUR (Farmland Act)</div><div class="sd">Any buyer qualifies</div></div>
+<div class="stat"><div class="sv">Available</div><div class="sl">CIT Exemption (PSI)</div><div class="sd">Polish Investment Zone</div></div>
+</div>
+
+<h3>What P/UO.4 Permits</h3>
+<ul>
+<li>Production and manufacturing facilities</li>
+<li>Warehouses and logistics buildings</li>
+<li>Service buildings and offices supporting production</li>
+<li>Technical infrastructure (roads, utilities, parking)</li>
+<li>Waste management facilities</li>
+<li>Building height: up to 15m (MPZP &sect;8)</li>
+<li>Building coverage: up to 60% of plot area</li>
+<li>Minimum green area: 20% of plot</li>
+</ul>
+
+<h3>Key Legal Protections</h3>
+<table>
+<thead><tr><th>Feature</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><strong>No UKUR restriction</strong></td><td>P/UO.4 zoning exempts these plots from agricultural land trade restrictions (UKUR). Any EU or US buyer can purchase without special permits. No KOWR pre-emption right.</td></tr>
+<tr><td><strong>No odrolnienie fee</strong></td><td>RIVb mineral soils are exempt from all statutory agricultural land conversion fees (Art. 12 ust. 6). Administrative cost only: &euro;250&ndash;700.</td></tr>
+<tr><td><strong>EU property protections</strong></td><td>Polish constitutional property rights reinforced by EU law. Expropriation requires full market-value compensation. Independent judiciary.</td></tr>
+<tr><td><strong>Land registry</strong></td><td>Ksi&eogon;ga wieczysta (perpetual book) &mdash; public, verifiable land registry with full ownership history, encumbrances, and lien records.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== I. TRANSACTION ===== -->
+<section id="transaction">
+<div class="section-label">Section I</div>
+<h2>Transaction <em>Process</em></h2>
+<p class="section-intro">Purchasing land in Poland follows a clear, regulated process. All transactions require notarial form and are recorded in the public land registry.</p>
+
+<table>
+<thead><tr><th>Step</th><th>Description</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Due diligence</strong></td><td>Buyer reviews: land registry (ksi&eogon;ga wieczysta), MPZP zoning extract, soil classification, utility conditions, tax clearance.</td><td>1&ndash;2 weeks</td></tr>
+<tr><td><strong>2. Preliminary agreement</strong></td><td>Optional: notarized preliminary agreement (umowa przedwst&eogon;pna) with deposit (zadatek, typically 10%). Locks in price and terms.</td><td>1 day</td></tr>
+<tr><td><strong>3. Final notarial deed</strong></td><td>Signed before a Polish notary (akt notarialny). Transfers ownership immediately. Both parties present or represented by power of attorney.</td><td>1 day</td></tr>
+<tr><td><strong>4. Land registry update</strong></td><td>Notary files for ownership change in ksi&eogon;ga wieczysta. Court processes within 1&ndash;3 months.</td><td>1&ndash;3 months</td></tr>
+<tr><td><strong>5. Tax obligations</strong></td><td>Buyer pays 2% PCC (tax on civil transactions) unless VAT applies. Seller handles any capital gains obligations.</td><td>At signing</td></tr>
+</tbody>
+</table>
+
+<div class="hbox green">
+<p><strong>For EU/EEA/US buyers:</strong> No special permits required. The transaction process is identical to a domestic purchase. Non-EU buyers purchasing agricultural land face UKUR restrictions &mdash; but these plots are exempt due to P/UO.4 zoning.</p>
+</div>
+
+<h3>Seller Information</h3>
+<table>
+<thead><tr><th>Detail</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td><strong>Ownership</strong></td><td>Private individual (natural person). Direct sale &mdash; no intermediary, no commission.</td></tr>
+<tr><td><strong>Acquisition</strong></td><td>Donation (darowizna) 2018. Clean title. No encumbrances, no liens, no disputes.</td></tr>
+<tr><td><strong>Land registry</strong></td><td>KW WR1O/00001824/3 &mdash; publicly verifiable</td></tr>
+<tr><td><strong>Tax status</strong></td><td>All four plots PIT-exempt (5-year holding period satisfied)</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section style="text-align: center; padding: 60px 0;">
+<h2>Next <em>Steps</em></h2>
+<p style="max-width: 600px; margin: 0 auto 30px; font-size: 1rem;">We present the opportunity. The data speaks for itself. If this corridor fits your expansion or investment planning, we welcome further discussion.</p>
+
+<div class="stats" style="max-width: 600px; margin: 0 auto;">
+<div class="stat"><div class="sv" style="font-size: 1.2rem;">a4corridor.com</div><div class="sl">Full Research</div></div>
+<div class="stat"><div class="sv" style="font-size: 1rem;">michal.ksiadzyna<br>@a4corridor.com</div><div class="sl">Direct Contact</div></div>
+</div>
+</section>
+
+</div>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<div class="foot">
+<p>&copy; 2026 A4 Corridor. All information factual and sourced. Prepared March 2026.</p>
+<p><a href="https://a4corridor.com">a4corridor.com</a></p>
+</div>
+
+</body>
+</html>
