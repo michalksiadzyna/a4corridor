@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A4Corridor — Industrial Land Investment, Western Poland</title>
 <meta name="description" content="40,849 m² of production-zoned industrial land on the A4 motorway corridor near Wrocław, Poland. €3.8B in confirmed corridor investment. Permanent MPZP zoning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a2332' width='100' height='100' rx='12'/><text x='50' y='68' text-anchor='middle' fill='%23b8a472' font-family='serif' font-size='52' font-weight='600'>A4</text></svg>">
+<link rel="canonical" href="https://a4corridor.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A4Corridor">
+<meta property="og:title" content="A4Corridor — Industrial Land Investment, Western Poland">
+<meta property="og:description" content="40,849 m² of production-zoned industrial land on the A4 motorway corridor near Wrocław, Poland. €3.8B in confirmed corridor investment. Permanent MPZP zoning.">
 <!-- GA4: G-XXXXXXXXXX -->
 </head>
 <body>
@@ -17,16 +26,51 @@
         <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-        <li><a href="corridor.html">Corridor</a></li>
-        <li><a href="infrastructure.html">Infrastructure</a></li>
-        <li><a href="economy.html">Economy</a></li>
-        <li><a href="defense.html">Defense</a></li>
-        <li><a href="plots.html">Plots</a></li>
-        <li><a href="expose.html">Exposé</a></li>
+        <li>
+            <a href="corridor.html">Location</a>
+            <ul class="dropdown-menu">
+                <li><a href="corridor.html">Corridor Overview</a></li>
+                <li><a href="infrastructure.html">Infrastructure</a></li>
+                <li><a href="logistics.html">Logistics</a></li>
+                <li><a href="area-profile.html">Area Profile</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="economy.html">Investment</a>
+            <ul class="dropdown-menu">
+                <li><a href="economy.html">Economy</a></li>
+                <li><a href="defense.html">Defense</a></li>
+                <li><a href="land-value.html">Land Value</a></li>
+                <li><a href="global-comparison.html">Global Comparison</a></li>
+                <li><a href="land-cost-perspective.html">Land Cost</a></li>
+                <li><a href="industrial-land-market.html">Market Analysis</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="plots.html">Plots</a>
+            <ul class="dropdown-menu">
+                <li><a href="plots.html">All Plots</a></li>
+                <li><a href="plots/flagship.html">Flagship — 27,384 m²</a></li>
+                <li><a href="plots/premium.html">Premium — 9,322 m²</a></li>
+                <li><a href="plots/entry.html">Entry — 4,143 m²</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="why-poland.html">Buyer Guide</a>
+            <ul class="dropdown-menu">
+                <li><a href="why-poland.html">Why Poland</a></li>
+                <li><a href="buying-land-in-poland.html">Buying Process</a></li>
+                <li><a href="legal-framework.html">Legal Framework</a></li>
+                <li><a href="tax-incentives.html">Tax Incentives</a></li>
+                <li><a href="zoning-explained.html">Zoning Explained</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">Contact</a></li>
     </ul>
 </nav>
 
 <section class="hero">
+    <h1 class="hero-headline">40,849 m² of Production-Zoned Land on Europe's Fastest-Growing Industrial Corridor</h1>
     <div class="hero-stats">
         <div class="hero-stat">
             <div class="number">€3.8B</div>
@@ -44,7 +88,7 @@
         </div>
     </div>
     <div class="hero-subtitle">Production-zoned land on the A4 motorway corridor, western Poland.</div>
-    <div class="hero-tagline">We present the opportunity. The data speaks for itself.</div>
+    <div class="hero-tagline">A4 motorway, 25 km from Wroclaw. Permanent zoning. Three plots available.</div>
 </section>
 
 <div class="stats-bar">
@@ -66,7 +110,7 @@
     </div>
 </div>
 
-<section class="section">
+<section class="section fade-up">
     <div class="section-label">Available Plots</div>
     <h2>Three Investment Opportunities</h2>
     <p>Production-zoned land with permanent MPZP zoning, confirmed utilities, and full regulatory clarity. Available individually or as a complete portfolio.</p>
@@ -105,7 +149,7 @@
     </div>
 
     <div class="portfolio-note">
-        <p><strong>Full portfolio acquisition available.</strong> All three plots as a single transaction — 40,849 m² of contiguous production-zoned land.</p>
+        <p><strong>Full portfolio acquisition available.</strong> All three plots as a single transaction — 40,849 m² of production-zoned land in the same corridor area.</p>
     </div>
 </section>
 
@@ -116,6 +160,13 @@
     <h2>Why This Location</h2>
     <p>The A4 motorway corridor between Wrocław and Opole is one of western Poland's most active industrial zones. Electrolux, Essity, MCC, and Autoliv operate within 3 km of these plots. €3.8 billion in confirmed investment is concentrated within a 30 km radius — and 12 infrastructure projects worth €355M+ are currently underway.</p>
     <p>Available greenfield industrial land in the Wrocław area is contracting. The construction pipeline has declined 94%. Major developers have shifted to brownfield sites. Well-located, permanently zoned production land is becoming scarce.</p>
+
+    <h3 style="color: var(--accent2); font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;">Oława Area Investments</h3>
+    <div id="home-map-local" class="map-container map-container-small"></div>
+
+    <h3 style="color: var(--accent2); font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; margin-bottom: 12px;">Regional Investment Map</h3>
+    <div id="home-map-regional" class="map-container"></div>
+
     <div style="margin-top: 30px;">
         <a href="corridor.html" class="cta-button-outline">Explore the Corridor</a>
     </div>
@@ -128,9 +179,64 @@
 </section>
 
 <footer>
-    <div class="contact"><a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></div>
-    <div class="legal">© 2026 A4Corridor. All information presented is factual and sourced.</div>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">A4Corridor</div>
+            <p class="footer-desc">40,849 m² of production-zoned industrial land on the A4 motorway corridor, 25 km from Wroclaw, Poland.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Plots</h4>
+            <ul>
+                <li><a href="plots/flagship.html">Flagship — 27,384 m²</a></li>
+                <li><a href="plots/premium.html">Premium — 9,322 m²</a></li>
+                <li><a href="plots/entry.html">Entry — 4,143 m²</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="why-poland.html">Why Poland</a></li>
+                <li><a href="buying-land-in-poland.html">Buying Process</a></li>
+                <li><a href="global-comparison.html">Price Comparison</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:michal.ksiadzyna@a4corridor.com">Email Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="legal">© 2026 A4Corridor · <a href="privacy.html">Privacy</a> · <a href="legal.html">Legal Notice</a> · All information is factual and sourced.</p>
+    </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/corridor-map.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Regional map — Dolnoslaskie + Opolskie with all major investments
+    A4Map.regional('home-map-regional');
+    // Local map — Olawa area with nearby companies and plots
+    A4Map.local('home-map-local');
+
+    var faders = document.querySelectorAll('.fade-up');
+    if (faders.length && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        faders.forEach(function(el) { observer.observe(el); });
+    } else {
+        faders.forEach(function(el) { el.classList.add('visible'); });
+    }
+});
+</script>
 </body>
 </html>

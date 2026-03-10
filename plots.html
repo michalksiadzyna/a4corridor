@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Available Plots — 40,849 m² Production-Zoned Land, A4Corridor</title>
 <meta name="description" content="Three production-zoned plots available on the A4Corridor: Flagship (27,384 m²), Premium (9,322 m²), Entry (4,143 m²). Total portfolio: 40,849 m², €4,667,000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a2332' width='100' height='100' rx='12'/><text x='50' y='68' text-anchor='middle' fill='%23b8a472' font-family='serif' font-size='52' font-weight='600'>A4</text></svg>">
+<link rel="canonical" href="https://a4corridor.com/plots.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A4Corridor">
+<meta property="og:title" content="Available Plots — 40,849 m² Production-Zoned Land, A4Corridor">
+<meta property="og:description" content="Three production-zoned plots available on the A4Corridor: Flagship (27,384 m²), Premium (9,322 m²), Entry (4,143 m²). Total portfolio: 40,849 m², €4,667,000.">
 <!-- GA4: G-XXXXXXXXXX -->
 </head>
 <body>
@@ -17,12 +26,46 @@
         <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-        <li><a href="corridor.html">Corridor</a></li>
-        <li><a href="infrastructure.html">Infrastructure</a></li>
-        <li><a href="economy.html">Economy</a></li>
-        <li><a href="defense.html">Defense</a></li>
-        <li><a href="plots.html" class="active">Plots</a></li>
-        <li><a href="expose.html">Exposé</a></li>
+        <li>
+            <a href="corridor.html">Location</a>
+            <ul class="dropdown-menu">
+                <li><a href="corridor.html">Corridor Overview</a></li>
+                <li><a href="infrastructure.html">Infrastructure</a></li>
+                <li><a href="logistics.html">Logistics</a></li>
+                <li><a href="area-profile.html">Area Profile</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="economy.html">Investment</a>
+            <ul class="dropdown-menu">
+                <li><a href="economy.html">Economy</a></li>
+                <li><a href="defense.html">Defense</a></li>
+                <li><a href="land-value.html">Land Value</a></li>
+                <li><a href="global-comparison.html">Global Comparison</a></li>
+                <li><a href="land-cost-perspective.html">Land Cost</a></li>
+                <li><a href="industrial-land-market.html">Market Analysis</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="plots.html">Plots</a>
+            <ul class="dropdown-menu">
+                <li><a href="plots.html">All Plots</a></li>
+                <li><a href="plots/flagship.html">Flagship — 27,384 m²</a></li>
+                <li><a href="plots/premium.html">Premium — 9,322 m²</a></li>
+                <li><a href="plots/entry.html">Entry — 4,143 m²</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="why-poland.html">Buyer Guide</a>
+            <ul class="dropdown-menu">
+                <li><a href="why-poland.html">Why Poland</a></li>
+                <li><a href="buying-land-in-poland.html">Buying Process</a></li>
+                <li><a href="legal-framework.html">Legal Framework</a></li>
+                <li><a href="tax-incentives.html">Tax Incentives</a></li>
+                <li><a href="zoning-explained.html">Zoning Explained</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">Contact</a></li>
     </ul>
 </nav>
 
@@ -51,7 +94,7 @@
     </div>
 </div>
 
-<section class="section">
+<section class="section fade-up">
     <div class="section-label">Available Plots</div>
     <h2>Three Investment Opportunities</h2>
     <p>Each plot carries permanent MPZP production zoning (P/UO.4), direct access via County Road 1572D, and confirmed utility connectivity. The flagship plots additionally carry U1 commercial zoning, broadening development options.</p>
@@ -99,12 +142,14 @@
     <div class="portfolio-summary">
         <div class="total-label">Complete Portfolio</div>
         <div class="total-price">€4,667,000</div>
-        <div class="total-sub">$5,367,000 USD · 40,849 m² · Three contiguous production-zoned plots</div>
+        <div class="total-sub">$5,367,000 USD · 40,849 m² · Three production-zoned plots</div>
     </div>
 
     <div class="portfolio-note">
-        <p><strong>Acquire individually or as a complete portfolio.</strong> All three plots can be acquired as a single transaction — 40,849 m² of contiguous production-zoned land with permanent MPZP zoning, unified road access, and utility connectivity.</p>
+        <p><strong>Acquire individually or as a complete portfolio.</strong> All three plots can be acquired as a single transaction — 40,849 m² of production-zoned land with permanent MPZP zoning, road access via County Road 1572D, and utility connectivity.</p>
     </div>
+
+    <div id="plots-map" class="map-container" style="margin-top: 40px;"></div>
 </section>
 
 <div class="accent-line"></div>
@@ -134,15 +179,69 @@
 </section>
 
 <section class="cta-section">
-    <h2>Request the Full Investment Exposé</h2>
-    <p>Detailed plot specifications, MPZP extracts, infrastructure maps, and financial analysis.</p>
+    <h2>Request Full Plot Specifications</h2>
+    <p>MPZP extracts, infrastructure proximity data, and pricing breakdown for each plot.</p>
     <a href="expose.html" class="cta-button">Request Exposé</a>
 </section>
 
 <footer>
-    <div class="contact"><a href="mailto:michal.ksiadzyna@a4corridor.com">michal.ksiadzyna@a4corridor.com</a></div>
-    <div class="legal">© 2026 A4Corridor. All information presented is factual and sourced.</div>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">A4Corridor</div>
+            <p class="footer-desc">40,849 m² of production-zoned industrial land on the A4 motorway corridor, 25 km from Wroclaw, Poland.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Plots</h4>
+            <ul>
+                <li><a href="plots/flagship.html">Flagship — 27,384 m²</a></li>
+                <li><a href="plots/premium.html">Premium — 9,322 m²</a></li>
+                <li><a href="plots/entry.html">Entry — 4,143 m²</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="why-poland.html">Why Poland</a></li>
+                <li><a href="buying-land-in-poland.html">Buying Process</a></li>
+                <li><a href="global-comparison.html">Price Comparison</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:michal.ksiadzyna@a4corridor.com">Email Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="legal">© 2026 A4Corridor · <a href="privacy.html">Privacy</a> · <a href="legal.html">Legal Notice</a> · All information is factual and sourced.</p>
+    </div>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/corridor-map.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Plot map — all for-sale plots with polygons
+    A4Map.plot('plots-map', ['133', '135/1', '143', '159']);
+
+    var faders = document.querySelectorAll('.fade-up');
+    if (faders.length && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        faders.forEach(function(el) { observer.observe(el); });
+    } else {
+        faders.forEach(function(el) { el.classList.add('visible'); });
+    }
+});
+</script>
 
 </body>
 </html>
