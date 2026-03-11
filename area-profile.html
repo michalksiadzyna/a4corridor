@@ -4,17 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oława Area Profile — Where Your Employees Will Live</title>
-<meta name="description" content="Oława, Poland — 25 km from Wrocław. Living standards, education, healthcare, transport connections, housing costs, and quality of life for the workforce.">
+<meta name="description" content="Oława, Poland — 33,000 residents, 25 km from Wrocław, 15-min train. Full area profile: housing, healthcare, education, transport, recreation, and local attractions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a2332' width='100' height='100' rx='12'/><text x='50' y='68' text-anchor='middle' fill='%23b8a472' font-family='serif' font-size='52' font-weight='600'>A4</text></svg>">
 <link rel="canonical" href="https://a4corridor.com/area-profile.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A4Corridor">
 <meta property="og:title" content="Oława Area Profile — Where Your Employees Will Live">
-<meta property="og:description" content="Oława, Poland — 25 km from Wrocław. Living standards, education, healthcare, transport connections, housing costs, and quality of life for the workforce.">
+<meta property="og:description" content="Oława, Poland — 33,000 residents, 25 km from Wrocław, 15-min train. Full area profile: housing, healthcare, education, transport, recreation, and local attractions.">
+<meta property="og:image" content="https://a4corridor.com/img/context-satellite.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:url" content="https://a4corridor.com/area-profile.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oława Area Profile — Where Your Employees Will Live">
+<meta name="twitter:description" content="Oława, Poland — 33,000 residents, 25 km from Wrocław, 15-min train. Full area profile: housing, healthcare, education, transport, recreation, and local attractions.">
+<meta name="twitter:image" content="https://a4corridor.com/img/context-satellite.jpg">
 <!-- GA4: G-XXXXXXXXXX -->
 </head>
 <body>
@@ -71,14 +81,85 @@
 <section class="page-hero">
     <div class="section-label">Local Area</div>
     <h1>Where Your Employees Will Live</h1>
-    <p class="lead">The plots are located in gmina Oława, a well-connected community 25 km from Wrocław. The area offers affordable housing, quality education, healthcare access, and excellent transport links — supporting employee recruitment and retention.</p>
+    <p class="lead">The plots are located in gmina Oława — a growing community of 33,000 people, 25 km from Wrocław with a 15-minute train connection. Affordable housing, a full-service hospital, quality schools, and a 5-star marina on the Odra River. Poland's first railway terminated here in 1842.</p>
 </section>
 
+<div class="stats-bar">
+    <div class="stat-item">
+        <div class="num">33,087</div>
+        <div class="desc">City Population</div>
+    </div>
+    <div class="stat-item">
+        <div class="num">15 min</div>
+        <div class="desc">Train to Wrocław</div>
+    </div>
+    <div class="stat-item">
+        <div class="num">4.3%</div>
+        <div class="desc">Unemployment</div>
+    </div>
+    <div class="stat-item">
+        <div class="num">1842</div>
+        <div class="desc">First Railway in Poland</div>
+    </div>
+</div>
+
 <section class="section fade-up">
-    <div class="section-label">Living Standards</div>
-    <h2>Quality of Life</h2>
-    <p>Oława is a growing community that benefits from proximity to Wrocław while maintaining lower living costs. Employees at corridor facilities can live in Oława, in surrounding villages, or commute from Wrocław — all within practical distances.</p>
-    <p>The area offers a mix of urban convenience and rural calm. Oława's town center provides daily necessities — supermarkets, restaurants, banks, and services — while the surrounding countryside offers open space and a quieter lifestyle.</p>
+    <div class="section-label">The Town</div>
+    <h2>Oława — Nearly 900 Years of History</h2>
+    <p>Oława is a Piast dynasty town at the confluence of the Odra and Oława rivers, with documented history reaching back to 1149. The town received city rights around 1234 and served as a royal residence — Crown Prince Jakub Sobieski, son of Poland's celebrated warrior-king Jan III Sobieski, ruled from the Oława castle between 1691 and 1737.</p>
+    <p>In 1842, the locomotive "Silesia" departed Wrocław and arrived in Oława — inaugurating the first railway line on present-day Polish territory. Today, Oława is a thriving industrial community with 33,087 residents, growing 6.3% since 2002, with below-national unemployment at 4.3%.</p>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h4>Pałac Luizy</h4>
+            <p>A 14th-century castle rebuilt in Renaissance and Baroque style by Italian architects Carlo Rossi and Luca Giovani. Houses the Municipal Office. Features an arcaded loggia and Princess Luiza's original coat of arms.</p>
+        </div>
+        <div class="info-card">
+            <h4>Town Hall & Astronomical Clock</h4>
+            <p>The 58.5-meter Town Hall, renovated by architect Karl Friedrich Schinkel, houses a Baroque astronomical clock (1680–1718) with moving figures of King Solomon, a gilded moon sphere, and hand-forged steel components still working after 300 years.</p>
+        </div>
+        <div class="info-card">
+            <h4>WENA Automotive Museum</h4>
+            <p>Poland's largest private automotive museum, opened June 2024 in Oława. 7,000 m² exhibition space with 459+ cars, 100+ motorcycles, 192 bicycles. An additional 5,000 m² expansion is underway.</p>
+        </div>
+        <div class="info-card">
+            <h4>Railway Heritage</h4>
+            <p>The original 1842 railway station, designed by architect August Rosenbaum, stands as a monument to Poland's first railroad. The Wrocław–Oława line was built by Sharp, Roberts & Co. of Manchester.</p>
+        </div>
+    </div>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section">
+    <div class="section-label">Ścinawa Polska</div>
+    <h2>The Village Where the Plots Are</h2>
+    <p>The A4Corridor plots are located in Ścinawa Polska, a village in gmina Oława that shares the 55-200 postal code with the town. The village boundary sits just 0.7–1.0 km from Oława's urban edge — functionally adjacent. Driving to Oława center takes 5 minutes via County Road 1572D.</p>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h4>Marina Oława ★★★★★</h4>
+            <p>A 5-star marina on the Odra River, located in Ścinawa Polska itself (address: Ścinawa Polska 38a). Features a premium waterfront restaurant (Tawerna Kapitańska, 4.5/5 on Restaurant Guru from 1,989 reviews), floating apartments, and 24/7 monitoring. Winner of the 2013 "Przyjazny Brzeg" national award. Hosts the annual "Piana Bosmana" river festival since 2010.</p>
+        </div>
+        <div class="info-card">
+            <h4>Grady Odrzańskie — Natura 2000</h4>
+            <p>A 20,000-hectare Natura 2000 wilderness stretching 70 km along the Odra valley, directly across the river from Ścinawa Polska. 294,000 annual visitors. 113 breeding bird species. Oak-hornbeam forests, meadows, wetlands, and the Odra cycling trail.</p>
+        </div>
+    </div>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section">
+    <div class="section-label">Area Map</div>
+    <h2>Local Area</h2>
+
+    <div style="margin: 40px 0;">
+        <img src="img/context-satellite.jpg" alt="Satellite context view showing A4 Motorway, Oława, and corridor" style="width:100%;border-radius:4px;border:2px solid var(--gold);">
+        <p style="text-align:center;font-size:0.85em;color:var(--text-muted);margin-top:8px;">Satellite context — A4 Motorway, Oława, Ścinawa Polska</p>
+    </div>
+
+    <div id="area-map" class="map-container"></div>
 </section>
 
 <div class="accent-line"></div>
@@ -90,19 +171,19 @@
     <div class="info-grid">
         <div class="info-card">
             <h4>Rail to Wrocław</h4>
-            <p>Oława Główna station provides 15–25 minute train service to Wrocław Główny (central station). Both Intercity and POLREGIO services operate on this route, with regular daily departures. The new Oława Zachodnia station, opened June 2025, provides additional rail access.</p>
+            <p>Direct trains every ~30 minutes via PKP Intercity and POLREGIO — 25 daily services. Journey time: 15 minutes to Wrocław Główny. The new Oława Zachodnia station (opened June 2025) provides additional western access. Poland's oldest railway line, operating since 1842.</p>
         </div>
         <div class="info-card">
             <h4>Road Access</h4>
-            <p>The A4 motorway provides direct high-speed access to Wrocław (25 km), Opole, Katowice, and Kraków. The DK94 national road runs parallel as a secondary route. County Road 1572D provides direct access to the plots.</p>
+            <p>A4 motorway via Węzeł Brzezimierz — 25 km to Wrocław, direct connections to Opole, Katowice, and Kraków. DK94 national road as secondary route. County Road 1572D provides direct access to the plots. 28 km / ~40 minutes to Wrocław center by car.</p>
         </div>
         <div class="info-card">
             <h4>Wrocław Airport</h4>
-            <p>Wrocław Copernicus Airport (WRO) is approximately 35 km from the plots, offering domestic and international flights. Direct connections to major European hubs support business travel for management and visiting clients.</p>
+            <p>Wrocław Copernicus Airport (WRO) — approximately 45 minutes by car. Domestic and international flights to major European hubs support business travel for management and visiting clients.</p>
         </div>
         <div class="info-card">
-            <h4>Local Commute</h4>
-            <p>Bus services connect Oława to surrounding communities. The compact size of the area means most employees live within a 15–30 minute commute of the plots, whether driving, cycling, or using public transport.</p>
+            <h4>Local Transit</h4>
+            <p>PKS Oława regional buses, Oławskie Przewozy Gminno-Powiatowe (OPGP) local routes, and FlixBus connection to Wrocław from €3 (~35 min). Most employees live within a 15–30 minute commute of the plots.</p>
         </div>
     </div>
 </section>
@@ -110,10 +191,35 @@
 <div class="accent-line"></div>
 
 <section class="section">
+    <div class="section-label">Housing</div>
+    <h2>Affordable Living</h2>
+    <p>Housing costs in Oława are roughly half of Wrocław city center prices. Employees can buy a quality apartment at ~€1,800/m² compared to €2,850–3,330/m² in Wrocław — while being 15 minutes away by train.</p>
+
+    <div class="data-table" style="margin: 30px auto; max-width: 700px;">
+        <table>
+            <thead>
+                <tr><th>Type</th><th>Price / Cost</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Purchase price (new build)</td><td>~€1,800/m²</td></tr>
+                <tr><td>Average apartment value</td><td>~€81,000</td></tr>
+                <tr><td>Studio / 1-room rental</td><td>€360/month + utilities</td></tr>
+                <tr><td>2-room apartment rental</td><td>€440–570/month + utilities</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Active developer projects include Zielona Daglezja (eco-focused), Osiedle Reńskie, and Nowy Otok Residence — signaling a growing, desirable housing market. Employees who prefer urban living can commute from Wrocław; those seeking space and lower costs live locally.</p>
+</section>
+
+<div class="accent-line"></div>
+
+<section class="section">
     <div class="section-label">Education</div>
     <h2>Schools and Universities</h2>
-    <p>Oława provides primary and secondary education facilities including public and private schools. For higher education, Wrocław's 20+ universities and institutions are accessible within 30 minutes by train or car.</p>
-    <p>Wrocław University of Technology, Wrocław University, and the University of Economics produce engineering, science, business, and technical graduates who form the recruitment pipeline for manufacturing operations. Access to this talent pool is a significant advantage for employers in the corridor.</p>
+    <p>Oława provides comprehensive education from nursery through secondary level. Ścinawa Polska itself has a primary school (Szkoła Podstawowa w Ścinawie Polskiej). The city's flagship high school, I Liceum Ogólnokształcące im. Jana III Sobieskiego, earned a Silver Shield in the 2026 Perspektywy national ranking.</p>
+    <p>Vocational training is available through Technikum Nr 1, Technikum Nr 2, and the Centrum Kształcenia Zawodowego i Ustawicznego (CKZiU) — programs tailored to local labor market needs. Public nursery "Zielony Zakątek" offers 96 places with EU-funded free care.</p>
+    <p>For higher education, Wrocław's 20+ universities — including Wrocław University of Technology, University of Economics, and Medical University — are 15 minutes by train. 130,000+ students and 30,000+ annual graduates form the recruitment pipeline for manufacturing operations.</p>
 </section>
 
 <div class="accent-line"></div>
@@ -121,16 +227,33 @@
 <section class="section">
     <div class="section-label">Healthcare</div>
     <h2>Medical Access</h2>
-    <p>The Oława area provides healthcare through local clinics, a hospital, and specialist facilities. For advanced medical care, Wrocław's major hospitals and specialist centers are accessible within 30 minutes. The healthcare infrastructure supports employee welfare and family needs.</p>
+    <p>Zespół Opieki Zdrowotnej w Oławie (County Hospital) at ul. Baczyńskiego 1 provides full-service medical care including emergency department (SOR), general surgery, internal medicine, pediatrics, gynecology & obstetrics (ranked top 4 in Lower Silesia for humane births), neonatology, ENT, ophthalmology, and specialist outpatient clinics.</p>
+    <p>Additional facilities include NZOZ Intmed (family medicine, pediatrics, ultrasound, EKG), multiple private dental and medical practices, and night/holiday medical care. For advanced tertiary care, Wrocław's university hospitals are accessible within 25–30 minutes.</p>
 </section>
 
 <div class="accent-line"></div>
 
 <section class="section">
-    <div class="section-label">Housing</div>
-    <h2>Affordable Living</h2>
-    <p>Housing costs in the Oława area are significantly below Wrocław city center prices. Employees can purchase or rent apartments and houses at rates that support a comfortable standard of living on manufacturing-sector wages. This affordability aids both recruitment and retention.</p>
-    <p>The area's proximity to Wrocław means that employees who prefer urban living can commute from the city, while those seeking more space and lower costs can live locally. This flexibility broadens the available labor pool beyond any single location.</p>
+    <div class="section-label">Economy</div>
+    <h2>Local Employment</h2>
+    <p>Oława is a productive industrial town. 64.9% of employment is in industry and construction. Average monthly gross salary in powiat oławski is €1,867 (91% of national average). Unemployment stands at 4.3% — below the national rate of 5.7%.</p>
+
+    <div class="data-table" style="margin: 30px auto; max-width: 700px;">
+        <table>
+            <thead>
+                <tr><th>Employer</th><th>Industry</th><th>Detail</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Electrolux Poland</td><td>Household appliances</td><td>~1,250 employees, 2M washing machines/year</td></tr>
+                <tr><td>Essity (Tork)</td><td>Hygiene products</td><td>Swedish multinational, ul. 3 Maja 30A</td></tr>
+                <tr><td>DS Smith</td><td>Packaging</td><td>1,300 employees, corrugated packaging</td></tr>
+                <tr><td>Autoliv</td><td>Automotive safety</td><td>Airbag textile components</td></tr>
+                <tr><td>Mobile Climate Control</td><td>HVAC</td><td>Swedish, vehicle climate systems</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>The presence of multiple Swedish and international manufacturers confirms that the area supports foreign operations effectively — established logistics, experienced workforce, and proven supply chains.</p>
 </section>
 
 <div class="accent-line"></div>
@@ -138,13 +261,14 @@
 <section class="section">
     <div class="section-label">Recreation</div>
     <h2>Lifestyle and Environment</h2>
-    <p>The surrounding countryside provides natural recreation — cycling, walking, and outdoor activities. The Odra River and its tributaries run through the area, providing waterfront access. Wrocław offers cultural amenities — theaters, museums, restaurants, and nightlife — all within 25 km.</p>
-    <p>The combination of accessible urban culture and local natural environment creates a balanced quality of life that supports employee satisfaction and long-term retention.</p>
+    <p>The Odra River runs through the area, with Marina Oława providing premium waterfront dining and river access. The 20,000-hectare Grady Odrzańskie Natura 2000 site across the river offers cycling (Odra Trail), fishing, birdwatching, and forest walks — attracting 294,000 visitors annually.</p>
+    <p>Termy Jakuba (thermal aquapark) provides year-round recreation. Oława's Market Square, castle park, and riverside promenades offer urban leisure. Wrocław — with its theaters, museums, restaurants, and nightlife — is 25 km away.</p>
+    <p>The WENA Automotive Museum (459+ cars, 7,000 m² and expanding) puts Oława on the national tourism map. The combination of accessible urban culture, premium river amenities, and protected natural landscapes creates a quality of life that supports employee satisfaction and long-term retention.</p>
 </section>
 
 <section class="cta-section">
-    <h2>Get the Area Intelligence Report</h2>
-    <p>Local services, population data, and proximity analysis.</p>
+    <h2>Get the Full Area Intelligence Report</h2>
+    <p>Demographics, proximity analysis, housing data, employer profiles, and local amenities.</p>
     <a href="expose.html" class="cta-button">Request Exposé</a>
 </section>
 
@@ -167,7 +291,7 @@
             <ul>
                 <li><a href="why-poland.html">Why Poland</a></li>
                 <li><a href="buying-land-in-poland.html">Buying Process</a></li>
-                <li><a href="global-comparison.html">Price Comparison</a></li>
+                <li><a href="global-comparison.html">Global Comparison</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -183,8 +307,64 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/corridor-map.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Area map showing local attractions and amenities
+    var map = L.map('area-map', {
+        center: [50.940, 17.295],
+        zoom: 13,
+        scrollWheelZoom: true,
+        zoomControl: true
+    });
+
+    var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap', maxZoom: 19
+    });
+    var sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri', maxZoom: 18
+    });
+    street.addTo(map);
+    L.control.layers({ 'Street': street, 'Satellite': sat }, null, { position: 'topright' }).addTo(map);
+
+    // Plot polygons
+    if (typeof A4Map !== 'undefined') {
+        // Use the shared plot drawing from corridor-map.js
+    }
+
+    // Area landmarks
+    var landmarks = [
+        { name: 'A4Corridor Plots', pos: [50.929, 17.327], color: '#00d4ff', icon: '📍' },
+        { name: 'Electrolux Factory', pos: [50.9304, 17.3152], color: '#3d7a52', icon: '🏭' },
+        { name: 'Marina Oława ★★★★★', pos: [50.935, 17.340], color: '#b8a472', icon: '⚓' },
+        { name: 'WENA Automotive Museum', pos: [50.945, 17.280], color: '#b8a472', icon: '🏛' },
+        { name: 'Oława Castle (Pałac Luizy)', pos: [50.9465, 17.2920], color: '#b8a472', icon: '🏰' },
+        { name: 'Town Hall & Astronomical Clock', pos: [50.9459, 17.2930], color: '#b8a472', icon: '🕐' },
+        { name: 'County Hospital (ZOZ)', pos: [50.950, 17.285], color: '#cc3333', icon: '🏥' },
+        { name: 'Oława Railway Station (1842)', pos: [50.9430, 17.2870], color: '#4466aa', icon: '🚂' },
+        { name: 'Oława Zachodnia Station', pos: [50.9450, 17.2687], color: '#4466aa', icon: '🚂' },
+        { name: 'Essity (Tork)', pos: [50.9372, 17.3083], color: '#3d7a52', icon: '🏭' },
+        { name: 'DS Smith', pos: [50.9375, 17.3154], color: '#3d7a52', icon: '🏭' },
+        { name: 'Autoliv', pos: [50.9214, 17.3068], color: '#3d7a52', icon: '🏭' },
+        { name: 'Grady Odrzańskie (Natura 2000)', pos: [50.935, 17.355], color: '#2d8a3d', icon: '🌿' }
+    ];
+
+    landmarks.forEach(function(lm) {
+        L.circleMarker(lm.pos, {
+            radius: lm.name.indexOf('A4Corridor') >= 0 ? 12 : 8,
+            color: lm.color,
+            fillColor: lm.color,
+            fillOpacity: 0.85,
+            weight: 2
+        }).addTo(map).bindTooltip(lm.name, {
+            permanent: false,
+            className: 'a4-regional-tooltip',
+            direction: 'top'
+        });
+    });
+
+    // Fade-up animations
     var faders = document.querySelectorAll('.fade-up');
     if (faders.length && 'IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function(entries) {

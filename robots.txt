@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://a4corridor.com/sitemap.xml
+
+Disallow: /thankyou.html
+Disallow: /404.html
+Disallow: /A4_CORRIDOR_EXPOSE.html
+Disallow: /img/capture.html

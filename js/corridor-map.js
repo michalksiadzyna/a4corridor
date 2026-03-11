@@ -107,10 +107,10 @@ var A4Map = (function () {
 
   var REGIONAL = [
     // === AUTOMOTIVE & E-MOBILITY ===
-    { name: 'Toyota Motor Manufacturing', detail: '7B PLN \u2014 Hybrid engines, 3,000 jobs, Jelcz-Laskowice', latlng: [51.0364, 17.2972], cat: 'factory', investment: '7,000M PLN' },
-    { name: 'LG Energy Solution', detail: 'Europe\'s largest EV battery plant, 10,000+ jobs', latlng: [51.0208, 16.8863], cat: 'factory', investment: '5,000M+ PLN' },
-    { name: 'POSCO E-Mobility', detail: '183M PLN \u2014 EV motor cores, Brzeg', latlng: [50.8612, 17.4367], cat: 'factory', investment: '183M PLN' },
-    { name: 'Mitsui High-Tec', detail: '160M PLN \u2014 EV motor cores, Skarbimierz', latlng: [50.8388, 17.4102], cat: 'factory', investment: '160M PLN' },
+    { name: 'Toyota Motor Manufacturing', detail: '\u20AC1.6B \u2014 Hybrid engines, 3,000 jobs, Jelcz-Laskowice', latlng: [51.0364, 17.2972], cat: 'factory', investment: '\u20AC1.6B' },
+    { name: 'LG Energy Solution', detail: 'Europe\'s largest EV battery plant, 10,000+ jobs', latlng: [51.0208, 16.8863], cat: 'factory', investment: '\u20AC1.2B+' },
+    { name: 'POSCO E-Mobility', detail: '\u20AC44M \u2014 EV motor cores, Brzeg', latlng: [50.8612, 17.4367], cat: 'factory', investment: '\u20AC44M' },
+    { name: 'Mitsui High-Tec', detail: '\u20AC38M \u2014 EV motor cores, Skarbimierz', latlng: [50.8388, 17.4102], cat: 'factory', investment: '\u20AC38M' },
     { name: 'Adient Poland', detail: 'Truck seating for MAN, Skarbimierz', latlng: [50.8353, 17.4242], cat: 'factory' },
     { name: 'Faurecia/Forvia', detail: '23M USD \u2014 Polyurethane foam, Jelcz-Laskowice', latlng: [51.0375, 17.3016], cat: 'factory', investment: '23M USD' },
     { name: 'Simoldes Plasticos', detail: '600+ employees \u2014 Automotive plastics, 20 years in corridor', latlng: [51.0345, 17.3032], cat: 'factory' },
@@ -119,37 +119,39 @@ var A4Map = (function () {
     { name: 'Align Technology', detail: '80,000 m\u00B2 \u2014 First EMEA facility, 2,500+ jobs', latlng: [51.1502, 17.1299], cat: 'factory' },
     { name: 'Cargill', detail: '38M EUR \u2014 Soluble fiber production, Bielany', latlng: [51.0450, 16.9511], cat: 'factory', investment: '38M EUR' },
     // === DEFENSE ===
-    { name: 'Jelcz Military Factory (NEW)', detail: '756M PLN \u2014 Defense vehicles, PGZ expansion', latlng: [51.0385, 17.3068], cat: 'defense', investment: '756M PLN' },
+    { name: 'Jelcz Military Factory (NEW)', detail: '\u20AC180M \u2014 Defense vehicles, PGZ expansion', latlng: [51.0385, 17.3068], cat: 'defense', investment: '\u20AC180M' },
     // === WHITE GOODS & CONSUMER ===
-    { name: 'Electrolux Factory', detail: '50M+ PLN \u2014 2M washing machines/year, 1,250 jobs', latlng: [50.9304, 17.3152], cat: 'factory', investment: '50M+ PLN' },
-    { name: 'BSH Bosch/Siemens (NEW)', detail: '\u20AC144M \u2014 Refrigerators & ovens, Wroc\u0142aw', latlng: [51.1467, 17.0313], cat: 'factory', investment: '\u20AC144M' },
-    { name: 'Ebersp\u00E4cher', detail: '40M+ PLN \u2014 EV heaters & climate, Godzikowice', latlng: [50.8984, 17.3330], cat: 'factory', investment: '40M PLN' },
-    { name: 'DS Smith', detail: '25M+ EUR \u2014 Corrugated packaging, 1,300 employees, O\u0142awa', latlng: [50.9375, 17.3154], cat: 'factory', investment: '25M+ EUR' },
-    { name: 'Mondelez (Cadbury/Milka)', detail: '74M PLN \u2014 Confectionery, 600+ jobs, Skarbimierz', latlng: [50.8392, 17.4122], cat: 'factory', investment: '74M PLN' },
-    { name: 'Donaldson Polska', detail: '45M PLN \u2014 Air filters, 200 jobs, Skarbimierz', latlng: [50.8387, 17.4046], cat: 'factory', investment: '45M PLN' },
+    { name: 'Electrolux Factory', detail: '\u20AC12M+ \u2014 2M washing machines/year, 1,250 jobs', latlng: [50.9304, 17.3152], cat: 'factory', investment: '\u20AC12M+' },
+    { name: 'BSH Bosch/Siemens (NEW)', detail: '\u20AC144M \u2014 Refrigerators & ovens, Wroc\u0142aw', latlng: [51.1475, 17.0309], cat: 'factory', investment: '\u20AC144M' },
+    { name: 'Ebersp\u00E4cher', detail: '\u20AC10M+ \u2014 EV heaters & climate, Godzikowice', latlng: [50.8989, 17.3334], cat: 'factory', investment: '\u20AC10M+' },
+    { name: 'DS Smith', detail: '25M+ EUR \u2014 Corrugated packaging, 1,300 employees, O\u0142awa', latlng: [50.9344, 17.3188], cat: 'factory', investment: '25M+ EUR' },
+    { name: 'Mondelez (Cadbury/Milka)', detail: '\u20AC18M \u2014 Confectionery, 600+ jobs, Skarbimierz', latlng: [50.8392, 17.4122], cat: 'factory', investment: '\u20AC18M' },
+    { name: 'Donaldson Polska', detail: '\u20AC11M \u2014 Air filters, 200 jobs, Skarbimierz', latlng: [50.8387, 17.4046], cat: 'factory', investment: '\u20AC11M' },
     { name: 'DeLaval', detail: '3 factories \u2014 Danish dairy equipment, Wroc\u0142aw', latlng: [51.1117, 17.0002], cat: 'factory' },
-    { name: 'Citronex/PPO Siechnice', detail: '50M PLN \u2014 Greenhouse complex, horticulture', latlng: [51.0246, 17.1520], cat: 'factory', investment: '50M PLN' },
+    { name: 'Citronex/PPO Siechnice', detail: '\u20AC12M \u2014 Greenhouse complex, horticulture', latlng: [51.0246, 17.1520], cat: 'factory', investment: '\u20AC12M' },
     { name: 'Kalizea', detail: '260,000 ton capacity \u2014 Corn semolina, Siechnice', latlng: [51.0422, 17.1572], cat: 'factory' },
     // === LOGISTICS ===
-    { name: 'SHEIN Distribution Hub', detail: '1B+ PLN \u2014 391,000 m\u00B2, 5,000 jobs', latlng: [50.9830, 16.9670], cat: 'logistics', investment: '1,000M+ PLN' },
+    { name: 'SHEIN Distribution Hub', detail: '\u20AC240M+ \u2014 391,000 m\u00B2, 5,000 jobs', latlng: [50.9905, 16.9472], cat: 'logistics', investment: '\u20AC240M+' },
     { name: 'Amazon WRO1 & WRO2', detail: 'Fulfillment centers, Bielany Wroc\u0142awskie', latlng: [51.0434, 16.9400], cat: 'logistics' },
-    { name: 'Panattoni South Hub', detail: '500M+ PLN \u2014 250,000 m\u00B2 warehouse', latlng: [50.9830, 16.9670], cat: 'logistics', investment: '500M+ PLN' },
-    { name: 'GLP Wroc\u0142aw V', detail: '250M PLN \u2014 238,100 m\u00B2, BREEAM Outstanding', latlng: [50.9830, 16.9670], cat: 'logistics', investment: '250M PLN' },
+    { name: 'Panattoni South Hub', detail: '\u20AC119M+ \u2014 250,000 m\u00B2 warehouse', latlng: [50.9980, 16.9590], cat: 'logistics', investment: '\u20AC119M+' },
+    { name: 'GLP Wroc\u0142aw V', detail: '\u20AC60M \u2014 238,100 m\u00B2, BREEAM Outstanding', latlng: [50.9905, 16.9472], cat: 'logistics', investment: '\u20AC60M' },
     { name: 'Prologis Park Wroc\u0142aw', detail: 'Multi-building logistics park, Bielany', latlng: [51.0442, 16.9590], cat: 'logistics' },
-    { name: 'P3 Wroc\u0142aw II', detail: '200,000 m\u00B2 logistics park', latlng: [51.0110, 16.8720], cat: 'logistics' },
+    { name: 'P3 Wroc\u0142aw II', detail: '200,000 m\u00B2 logistics park', latlng: [51.0034, 16.8757], cat: 'logistics' },
     // === INFRASTRUCTURE ===
-    { name: 'Trasa Mostowa (Bridge Route)', detail: '261M PLN \u2014 New Odra crossing + 4.3 km bypass', latlng: [50.9600, 17.2700], cat: 'infra', investment: '261M PLN' },
-    { name: 'Tauron R-186 (+30 MW)', detail: '31M PLN \u2014 Grid capacity expansion', latlng: [50.9313, 17.2903], cat: 'infra', investment: '31M PLN' },
-    { name: 'DK94 O\u0142awa Bypass', detail: '11 km bypass \u2014 env. decision Q3 2026', latlng: [50.945, 17.265], cat: 'infra' },
-    { name: 'A4 Motorway Rerouting', detail: 'Variant 2.1 approved Nov 2025 \u2014 capacity expansion', latlng: [50.970, 17.250], cat: 'infra' },
-    { name: 'Polder Lipki-O\u0142awa', detail: '232M EUR \u2014 Flood protection modernization, EU funded', latlng: [50.945, 17.240], cat: 'infra', investment: '232M EUR' },
+    { name: 'Trasa Mostowa (Bridge Route)', detail: '\u20AC62M \u2014 New Odra crossing + 4.3 km bypass', latlng: [50.9600, 17.2700], cat: 'infra', investment: '\u20AC62M' },
+    { name: 'Tauron R-186 (+30 MW)', detail: '\u20AC7.4M \u2014 Grid capacity expansion', latlng: [50.9313, 17.2903], cat: 'infra', investment: '\u20AC7.4M' },
+    { name: 'DK94 O\u0142awa Bypass', detail: '\u20AC73M \u2014 11 km bypass, env. decision Q3 2026', latlng: [50.935, 17.300], cat: 'infra', investment: '\u20AC73M' },
+    { name: 'A4 Motorway Rerouting', detail: '\u20AC1.86B \u2014 Variant 2.1, new 3-lane south of Wroc\u0142aw', latlng: [50.910, 17.180], cat: 'infra', investment: '\u20AC1.86B' },
+    { name: 'O\u0142awa Zachodnia Station', detail: '\u20AC3.1M \u2014 Opened June 2025, 50+ trains/day', latlng: [50.9454, 17.2680], cat: 'infra', investment: '\u20AC3.1M' },
+    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M \u2014 Historic renovation, 15 min to Wroc\u0142aw', latlng: [50.9430, 17.2870], cat: 'infra', investment: '\u20AC4M' },
+    { name: 'Polder Lipki-O\u0142awa', detail: '\u20AC232M \u2014 Flood protection modernization, EU funded', latlng: [50.975, 17.305], cat: 'infra', investment: '\u20AC232M' },
     // === CITIES ===
     { name: 'Wroc\u0142aw', detail: '1.1M metro \u2014 Regional economic capital', latlng: [51.1079, 17.0385], cat: 'city' },
     { name: 'O\u0142awa', detail: 'Local industrial hub \u2014 3\u20135 km from plots', latlng: [50.9459, 17.2930], cat: 'city' },
     { name: 'Brzeg', detail: 'E-mobility cluster \u2014 POSCO, 30 km', latlng: [50.8611, 17.4690], cat: 'city' },
     // === SEZ ZONES ===
-    { name: 'Stanowice SEZ', detail: 'WSSE subzone \u2014 93% full, 25 ha remaining', latlng: [50.9740, 17.2500], cat: 'sez', investment: 'Saturating' },
-    { name: 'Godzikowice SEZ', detail: 'WSSE O\u0142awa II \u2014 39 ha remaining', latlng: [50.8984, 17.3330], cat: 'sez' },
+    { name: 'Stanowice SEZ', detail: 'WSSE subzone \u2014 93% full, 25 ha remaining', latlng: [50.9648, 17.2624], cat: 'sez', investment: 'Saturating' },
+    { name: 'Godzikowice SEZ', detail: 'WSSE O\u0142awa II \u2014 39 ha remaining', latlng: [50.8989, 17.3334], cat: 'sez' },
     { name: 'Skarbimierz SEZ', detail: 'WSSE \u2014 Mitsui, Mondelez, Donaldson, Adient', latlng: [50.8388, 17.4102], cat: 'sez' }
   ];
 
@@ -160,19 +162,20 @@ var A4Map = (function () {
 
   var LOCAL = [
     { name: 'Electrolux Factory', detail: '1,250 jobs \u2014 2M washing machines/year', latlng: [50.9304, 17.3152], cat: 'factory' },
-    { name: 'Jelcz Military Factory', detail: '756M PLN expansion \u2014 defense vehicles', latlng: [51.0385, 17.3068], cat: 'defense' },
-    { name: 'Ebersp\u00E4cher', detail: 'EV heaters & AC systems \u2014 500 jobs', latlng: [50.8984, 17.3330], cat: 'factory' },
+    { name: 'Jelcz Military Factory', detail: '\u20AC180M expansion \u2014 defense vehicles', latlng: [51.0385, 17.3068], cat: 'defense', investment: '\u20AC180M' },
+    { name: 'Ebersp\u00E4cher', detail: 'EV heaters & AC systems \u2014 500 jobs', latlng: [50.8989, 17.3334], cat: 'factory', investment: '\u20AC10M+' },
     { name: 'Essity (Tork)', detail: 'Swedish hygiene products, ul. 3 Maja 30A', latlng: [50.9372, 17.3083], cat: 'factory' },
     { name: 'Mobile Climate Control', detail: 'Swedish HVAC for vehicles, ul. Szwedzka 1', latlng: [50.9311, 17.3181], cat: 'factory' },
-    { name: 'DS Smith', detail: 'Corrugated packaging \u2014 1,300 employees, ul. Dzier\u017Conia 57', latlng: [50.9375, 17.3154], cat: 'factory' },
+    { name: 'DS Smith', detail: 'Corrugated packaging \u2014 1,300 employees, ul. Dzier\u017Conia 57', latlng: [50.9344, 17.3188], cat: 'factory', investment: '\u20AC25M+' },
     { name: 'Autoliv', detail: 'Airbag textile components, ul. Polna 49', latlng: [50.9214, 17.3068], cat: 'factory' },
-    { name: 'Toyota (12 km)', detail: '7B PLN \u2014 hybrid engines, 3,000 jobs', latlng: [51.0364, 17.2972], cat: 'factory' },
-    { name: 'Stanowice SEZ', detail: '93% full \u2014 overflow imminent', latlng: [50.9740, 17.2500], cat: 'sez' },
-    { name: 'Trasa Mostowa', detail: '261M PLN \u2014 new Odra bridge + 4.3 km bypass', latlng: [50.9600, 17.2700], cat: 'infra' },
-    { name: 'Tauron R-186 (+30 MW)', detail: 'Grid capacity expansion', latlng: [50.9313, 17.2903], cat: 'infra' },
-    { name: 'O\u0142awa Zachodnia Station', detail: '50+ trains/day \u2014 15 min to Wroc\u0142aw', latlng: [50.9450, 17.2687], cat: 'infra' },
+    { name: 'Toyota (12 km)', detail: '\u20AC1.6B \u2014 hybrid engines, 3,000 jobs', latlng: [51.0364, 17.2972], cat: 'factory', investment: '\u20AC1.6B' },
+    { name: 'Stanowice SEZ', detail: '93% full \u2014 overflow imminent', latlng: [50.9648, 17.2624], cat: 'sez' },
+    { name: 'Trasa Mostowa', detail: '\u20AC62M \u2014 new Odra bridge + 4.3 km bypass', latlng: [50.9600, 17.2700], cat: 'infra', investment: '\u20AC62M' },
+    { name: 'Tauron R-186 (+30 MW)', detail: 'Grid capacity expansion', latlng: [50.9313, 17.2903], cat: 'infra', investment: '\u20AC7.4M' },
+    { name: 'O\u0142awa Zachodnia Station', detail: '50+ trains/day \u2014 15 min to Wroc\u0142aw', latlng: [50.9454, 17.2680], cat: 'infra', investment: '\u20AC3.1M' },
+    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M renovation \u2014 15 min to Wroc\u0142aw', latlng: [50.9430, 17.2870], cat: 'infra', investment: '\u20AC4M' },
     { name: 'A4 W\u0119ze\u0142 Brzezimierz', detail: 'A4 motorway interchange \u2014 nearest access', latlng: [50.8779, 17.2038], cat: 'infra' },
-    { name: 'DK94 Rebuild', detail: 'Full reconstruction \u2014 11.5t/axle standard', latlng: [50.9620, 17.2580], cat: 'infra' }
+    { name: 'DK94 Rebuild', detail: 'Full reconstruction \u2014 11.5t/axle standard', latlng: [50.9648, 17.2624], cat: 'infra' }
   ];
 
 
@@ -201,7 +204,7 @@ var A4Map = (function () {
     forSale:    { color: '#00d4ff', weight: 3, fillColor: '#00d4ff', fillOpacity: 0.30, dashArray: null },
     notForSale: { color: '#8a8a8a', weight: 3, fillColor: '#8a8a8a', fillOpacity: 0.25, dashArray: '6 4' },
     highlight:  { color: '#00d4ff', weight: 4, fillColor: '#00d4ff', fillOpacity: 0.40, dashArray: null },
-    a4road:     { color: '#c9a84c', weight: 6, opacity: 0.9, dashArray: null, smoothFactor: 1 },
+    a4road:     { color: '#c9a84c', weight: 3, opacity: 0.6, dashArray: null, smoothFactor: 1 },
     accessRoad: { color: '#cc3333', weight: 3, opacity: 0.85, dashArray: null, smoothFactor: 1 },
     plotLabel:  { color: '#00d4ff', weight: 2, fillColor: '#00d4ff', fillOpacity: 0.25 }
   };
@@ -312,6 +315,10 @@ var A4Map = (function () {
 
       var polygon = L.polygon(ring, style).addTo(map);
       polygon.bindPopup(plotPopup(plot));
+      polygon.bindTooltip('<strong>' + plot.label + '</strong><br><span style="font-weight:400;font-size:11px;opacity:0.85;">Your Future Investment</span>', {
+        permanent: false, direction: 'top', offset: [0, -8],
+        opacity: 0.95, className: 'a4-plots-badge'
+      });
       polygon.on('mouseover', function () { this.setStyle({ fillOpacity: style.fillOpacity + 0.15, weight: style.weight + 1 }); });
       polygon.on('mouseout',  function () { this.setStyle({ fillOpacity: style.fillOpacity, weight: style.weight }); });
 
@@ -337,7 +344,10 @@ var A4Map = (function () {
       var ms = MARKER_STYLES[lm.cat] || MARKER_STYLES.factory;
       var marker = L.circleMarker(lm.latlng, ms).addTo(map);
       marker.bindPopup(landmarkPopup(lm));
-      marker.bindTooltip(lm.name, {
+      var tipContent = lm.investment
+        ? '<strong>' + lm.name + '</strong><br><span style="font-weight:400;font-size:11px;opacity:0.85;">' + lm.investment + '</span>'
+        : lm.name;
+      marker.bindTooltip(tipContent, {
         permanent: false, direction: 'top', offset: [0, -12],
         opacity: 0.95, className: tooltipClass || 'a4-landmark-tooltip'
       });
@@ -354,16 +364,10 @@ var A4Map = (function () {
   function regional(containerId) {
     var map = createMap(containerId, { center: [50.99, 17.16], zoom: 10 });
 
-    // A4 motorway polyline
-    L.polyline(A4_ROUTE, STYLE.a4road).addTo(map)
-      .bindTooltip('A4 Motorway', { permanent: true, direction: 'top', className: 'a4-regional-tooltip', offset: [0, -6] });
-
     // === Trunk: DW396 roundabout -> north through Brzezimierz -> Olawa -> split point ===
-    // Starts at DW396 roundabout (A4 interchange), goes directly north — no southern segment
+    // Starts at DW396 roundabout at A4 interchange, goes directly north — no southern segment
     var trunk = [
-      [50.8654, 17.1922],  // DW396 roundabout at A4 interchange (origin)
-      [50.8681, 17.1941],  // DW396 heading N from roundabout
-      [50.8734, 17.1954],  // Entering Brzezimierz village
+      [50.8800, 17.2000],  // DW396 roundabout at A4/Węzeł Brzezimierz (meets A4 line)
       [50.8826, 17.1979],  // Past Brzezimierz
       [50.8910, 17.2006],  // Open road N
       [50.8967, 17.2059],  // Curving NE
@@ -416,7 +420,7 @@ var A4Map = (function () {
     var plotCenter = [50.929, 17.327];
     L.circleMarker(plotCenter, { radius: 14, color: '#00a8cc', fillColor: '#00d4ff', fillOpacity: 0.9, weight: 3 }).addTo(map);
     L.tooltip({ permanent: true, direction: 'right', className: 'a4-plots-badge', offset: [16, 0] })
-      .setContent('A4CORRIDOR PLOTS').setLatLng(plotCenter).addTo(map);
+      .setContent('A4CORRIDOR PLOTS<br><span style="font-weight:400;font-size:10px;">Your Future Investment</span>').setLatLng(plotCenter).addTo(map);
 
     // Regional landmarks
     drawLandmarks(map, REGIONAL, 'a4-regional-tooltip');

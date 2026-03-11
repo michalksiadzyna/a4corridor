@@ -420,6 +420,7 @@ nav {
     background: var(--gold);
     color: var(--bg);
     border-color: var(--gold);
+    transform: translateY(-2px);
 }
 
 /* ═══ PORTFOLIO NOTE ═══ */
@@ -484,6 +485,7 @@ nav {
 .cta-button:hover {
     background: var(--gold-light);
     color: var(--bg);
+    transform: translateY(-3px);
 }
 
 .cta-button-outline {
@@ -506,6 +508,7 @@ nav {
     background: var(--gold);
     color: var(--bg);
     border-color: var(--gold);
+    transform: translateY(-3px);
 }
 
 /* ═══ DATA TABLE ═══ */
@@ -565,11 +568,12 @@ nav {
     text-align: left;
     padding: 32px 28px;
     border-left: 3px solid var(--accent2);
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s;
 }
 
 .info-card:hover {
     border-left-color: var(--gold);
+    transform: translateY(-3px);
 }
 
 .info-card h4 {
@@ -620,11 +624,12 @@ nav {
     padding: 32px 28px;
     margin: 20px 0;
     border-left: 3px solid var(--accent2);
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s;
 }
 
 .project-card:hover {
     border-left-color: var(--gold);
+    transform: translateY(-3px);
 }
 
 .project-card .project-num {
@@ -827,13 +832,14 @@ nav {
     text-align: left;
     border-radius: 4px;
     padding: 24px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s;
     text-decoration: none;
     display: block;
 }
 
 .other-plot-card:hover {
     border-color: var(--gold);
+    transform: translateY(-3px);
 }
 
 .other-plot-card .tier {
