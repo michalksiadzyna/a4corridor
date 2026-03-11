@@ -348,12 +348,16 @@ nav {
 }
 
 .plot-card {
+    display: block;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 4px;
     text-align: left;
     padding: 40px 32px;
     transition: border-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .plot-card:hover {
