@@ -143,7 +143,7 @@ var A4Map = (function () {
     { name: 'DK94 O\u0142awa Bypass', detail: '\u20AC73M \u2014 11 km bypass, env. decision Q3 2026', latlng: [50.935, 17.300], cat: 'infra', investment: '\u20AC73M' },
     { name: 'A4 Motorway Rerouting', detail: '\u20AC1.86B \u2014 Variant 2.1, new 3-lane south of Wroc\u0142aw', latlng: [50.910, 17.180], cat: 'infra', investment: '\u20AC1.86B' },
     { name: 'O\u0142awa Zachodnia Station', detail: '\u20AC3.1M \u2014 Opened June 2025, 50+ trains/day', latlng: [50.9454, 17.2680], cat: 'infra', investment: '\u20AC3.1M' },
-    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M \u2014 Historic renovation, 15 min to Wroc\u0142aw', latlng: [50.9430, 17.2870], cat: 'infra', investment: '\u20AC4M' },
+    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M \u2014 Historic renovation, 15 min to Wroc\u0142aw', latlng: [50.9311, 17.2970], cat: 'infra', investment: '\u20AC4M' },
     { name: 'Polder Lipki-O\u0142awa', detail: '\u20AC232M \u2014 Flood protection modernization, EU funded', latlng: [50.975, 17.305], cat: 'infra', investment: '\u20AC232M' },
     // === CITIES ===
     { name: 'Wroc\u0142aw', detail: '1.1M metro \u2014 Regional economic capital', latlng: [51.1079, 17.0385], cat: 'city' },
@@ -173,7 +173,7 @@ var A4Map = (function () {
     { name: 'Trasa Mostowa', detail: '\u20AC62M \u2014 new Odra bridge + 4.3 km bypass', latlng: [50.9600, 17.2700], cat: 'infra', investment: '\u20AC62M' },
     { name: 'Tauron R-186 (+30 MW)', detail: 'Grid capacity expansion', latlng: [50.9313, 17.2903], cat: 'infra', investment: '\u20AC7.4M' },
     { name: 'O\u0142awa Zachodnia Station', detail: '50+ trains/day \u2014 15 min to Wroc\u0142aw', latlng: [50.9454, 17.2680], cat: 'infra', investment: '\u20AC3.1M' },
-    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M renovation \u2014 15 min to Wroc\u0142aw', latlng: [50.9430, 17.2870], cat: 'infra', investment: '\u20AC4M' },
+    { name: 'O\u0142awa G\u0142\u00F3wna Station', detail: '\u20AC4M renovation \u2014 15 min to Wroc\u0142aw', latlng: [50.9311, 17.2970], cat: 'infra', investment: '\u20AC4M' },
     { name: 'A4 W\u0119ze\u0142 Brzezimierz', detail: 'A4 motorway interchange \u2014 nearest access', latlng: [50.8779, 17.2038], cat: 'infra' },
     { name: 'DK94 Rebuild', detail: 'Full reconstruction \u2014 11.5t/axle standard', latlng: [50.9648, 17.2624], cat: 'infra' }
   ];
